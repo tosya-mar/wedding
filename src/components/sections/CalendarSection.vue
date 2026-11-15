@@ -38,6 +38,5 @@ const cells: (number | null)[] = [
         <template v-else>{{ d ?? '' }}</template>
       </span>
     </div>
-    <p class="calendar__note">{{ wedding.weekday }} · начало в {{ wedding.ceremony.time }}</p>
   </div>
 </template>
