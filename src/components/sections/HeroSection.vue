@@ -3,7 +3,7 @@ import type { ThemeDef } from '../../data/themes'
 import { wedding } from '../../data/wedding'
 import Skyline from '../decor/Skyline.vue'
 import Bouquet from '../decor/Bouquet.vue'
-import coupleImg from '../../assets/couple.jpg'
+import coupleImg from '../../assets/couple.png'
 
 defineProps<{ theme: ThemeDef }>()
 

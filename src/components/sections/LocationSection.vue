@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { wedding } from '../../data/wedding'
 import SectionTitle from '../SectionTitle.vue'
-import palaceImg from '../../assets/palace.jpg'
+import palaceImg from '../../assets/palace.png'
 
 const { ceremony, banquet } = wedding
 </script>
@@ -11,8 +11,8 @@ const { ceremony, banquet } = wedding
     <SectionTitle kicker="Location" title="Место проведения" />
 
     <article v-reveal class="place">
-      <div class="place__art place__art--photo" aria-hidden="true">
-        <img class="place__photo" :src="palaceImg" alt="" />
+      <div class="place__art place__art--cutout" aria-hidden="true">
+        <img class="place__cutout" :src="palaceImg" alt="" />
       </div>
       <p class="place__label">{{ ceremony.title }}</p>
       <p class="place__time">{{ ceremony.time }}</p>
