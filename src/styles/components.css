@@ -810,9 +810,19 @@
   animation: beat 1.8s ease-in-out infinite;
 }
 .calendar__note {
-  margin: 14px 0 0;
-  font-family: var(--font-script);
-  font-size: 1.25rem;
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 28%, transparent);
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 4.2vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-align: center;
   color: var(--accent);
 }
 
@@ -960,9 +970,9 @@
   color: var(--accent);
 }
 .place__art--photo {
-  width: min(100%, 300px);
+  width: 100%;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 8px;
   line-height: 0;
   box-shadow: 0 10px 28px rgba(40, 28, 18, 0.12);
 }
@@ -971,8 +981,8 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  object-position: center 35%;
-  aspect-ratio: 5 / 4;
+  object-position: center 30%;
+  aspect-ratio: 4 / 3;
 }
 .place__art .palace__wall {
   opacity: 0.22;
@@ -1120,21 +1130,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px 12px;
+  gap: 16px 14px;
   margin: 0 auto;
   padding: 0;
-  max-width: 360px;
+  max-width: 380px;
   list-style: none;
 }
 .dress__swatch {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 62px;
+  width: 64px;
 }
 .dress__dot {
-  width: 54px;
-  height: 54px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--c);
   box-shadow:

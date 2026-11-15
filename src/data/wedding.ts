@@ -61,6 +61,15 @@ export const wedding = {
     note: '',
   },
 
+  /** Dress-code palette shown in the invitation. */
+  palette: [
+    { color: '#123f3a', name: 'изумруд' },
+    { color: '#2e6b5f', name: 'малахит' },
+    { color: '#d9b56a', name: 'золото' },
+    { color: '#e8dcc0', name: 'шампань' },
+    { color: '#6b2737', name: 'марсала' },
+  ],
+
   details: [
     {
       title: 'Подарки',

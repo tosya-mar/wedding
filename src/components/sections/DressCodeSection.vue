@@ -12,7 +12,7 @@ defineProps<{ theme: ThemeDef }>()
     <p v-reveal class="dress__text">{{ wedding.dressCode.text }}</p>
     <ul class="dress__palette">
       <li
-        v-for="(c, i) in theme.palette"
+        v-for="(c, i) in wedding.palette"
         :key="c.color"
         v-reveal="'zoom'"
         class="dress__swatch"
