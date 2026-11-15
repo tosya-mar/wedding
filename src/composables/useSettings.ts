@@ -7,9 +7,8 @@ const ANIM_KEY = 'wedding:animations'
 function initialTheme(): ThemeId {
   const fromUrl = new URLSearchParams(location.search).get('theme')
   if (fromUrl && themeById(fromUrl)) return fromUrl as ThemeId
-  const saved = localStorage.getItem(THEME_KEY)
-  if (saved && themeById(saved)) return saved as ThemeId
-  return themes[0].id
+  // Published site opens on «Навстречу друг другу».
+  return 'meet'
 }
 
 function initialAnimations(): boolean {

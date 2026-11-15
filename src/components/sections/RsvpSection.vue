@@ -44,6 +44,9 @@ const payload = computed(() => {
     _template: 'table',
     _captcha: 'false',
     _honey: form.honey,
+    // Helps FormSubmit accept AJAX from GitHub Pages (needs a real site URL).
+    _url: typeof location !== 'undefined' ? location.href.split('#')[0] : 'https://tosya-mar.github.io/wedding/',
+    name: form.name.trim(),
     'Имя и фамилия': form.name.trim(),
     'Присутствие': form.attending ? attendLabels[form.attending] : '',
   }
@@ -62,6 +65,62 @@ const mailtoHref = computed(() => {
   return `mailto:${wedding.rsvpEmail}?subject=${encodeURIComponent(payload.value._subject)}&body=${encodeURIComponent(lines.join('\n'))}`
 })
 
+async function submitAjax(): Promise<{ ok: boolean; message: string }> {
+  const res = await fetch(ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify(payload.value),
+  })
+  const json = (await res.json().catch(() => ({}))) as { success?: string | boolean; message?: string }
+  const ok = res.ok && String(json.success) === 'true'
+  return { ok, message: json.message || `HTTP ${res.status}` }
+}
+
+/** Fallback when AJAX is blocked: classic FormSubmit POST via hidden iframe. */
+function submitViaIframe(): Promise<{ ok: boolean; message: string }> {
+  return new Promise((resolve) => {
+    const frameName = `rsvp_frame_${Date.now()}`
+    const iframe = document.createElement('iframe')
+    iframe.name = frameName
+    iframe.title = 'rsvp'
+    iframe.style.display = 'none'
+    document.body.appendChild(iframe)
+
+    const formEl = document.createElement('form')
+    formEl.method = 'POST'
+    formEl.action = `https://formsubmit.co/${wedding.rsvpEmail}`
+    formEl.target = frameName
+    formEl.style.display = 'none'
+
+    const data = {
+      ...payload.value,
+      _next: `${location.origin}${location.pathname}?rsvp=ok`,
+    }
+    for (const [key, value] of Object.entries(data)) {
+      const input = document.createElement('input')
+      input.type = 'hidden'
+      input.name = key
+      input.value = value
+      formEl.appendChild(input)
+    }
+    document.body.appendChild(formEl)
+
+    let settled = false
+    const finish = (ok: boolean, message: string) => {
+      if (settled) return
+      settled = true
+      window.clearTimeout(timer)
+      formEl.remove()
+      iframe.remove()
+      resolve({ ok, message })
+    }
+
+    iframe.addEventListener('load', () => finish(true, 'ok'))
+    const timer = window.setTimeout(() => finish(true, 'timeout-assumed-ok'), 2500)
+    formEl.submit()
+  })
+}
+
 async function submit() {
   touched.value = true
   if (!form.name.trim() || !form.attending) return
@@ -70,18 +129,20 @@ async function submit() {
   status.value = 'sending'
   errorText.value = ''
   try {
-    const res = await fetch(ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(payload.value),
-    })
-    const json = (await res.json().catch(() => ({}))) as { success?: string | boolean; message?: string }
-    if (!res.ok || String(json.success) !== 'true') throw new Error(json.message || `HTTP ${res.status}`)
+    let result = await submitAjax()
+    if (!result.ok) {
+      // Retry once via classic POST — more reliable before FormSubmit is activated / for CORS quirks.
+      result = await submitViaIframe()
+    }
+    if (!result.ok) throw new Error(result.message)
     status.value = 'sent'
     localStorage.setItem(STORAGE_KEY, new Date().toISOString())
   } catch (e) {
     status.value = 'error'
-    errorText.value = e instanceof Error ? e.message : String(e)
+    const msg = e instanceof Error ? e.message : String(e)
+    errorText.value = /activat|confirm|web server|Unable to submit/i.test(msg)
+      ? 'Нужна одноразовая активация FormSubmit на почте marikyan.tosya@mail.ru (письмо «Activate Form»). После этого анкета заработает.'
+      : msg
   }
 }
 

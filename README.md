@@ -42,5 +42,8 @@ npm run build    # проверка типов + сборка в dist/
 
 ## GitHub Pages
 
-Workflow `.github/workflows/deploy.yml` собирает сайт и публикует его при каждом пуше в `main`.
-Один раз в репозитории: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+Сайт: https://tosya-mar.github.io/wedding/  
+По умолчанию открывается тема **«Навстречу друг другу»** (`?theme=meet`).
+
+Workflow `.github/workflows/deploy.yml` собирает сайт и публикует его при каждом пуше в `main`
+(при необходимости сам включает Pages со source = GitHub Actions).
