@@ -1332,15 +1332,15 @@
   width: min(96vw, 460px);
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: linear-gradient(180deg, #1a4d45 0%, #123f3a 48%, #0e332f 100%);
+  background: transparent;
 }
 .meet__cloud {
   position: absolute;
   width: 90px;
   height: 22px;
   border-radius: 999px;
-  background: #fff;
-  opacity: 0.85;
+  background: rgba(232, 220, 192, 0.28);
+  opacity: 0.9;
   animation: meet-cloud 26s linear infinite alternate;
 }
 .meet__cloud::before {
@@ -1375,7 +1375,7 @@
   left: 0;
   width: 100%;
   color: #e8dcc0;
-  opacity: 0.35;
+  opacity: 0.45;
 }
 .meet__svg {
   position: absolute;
@@ -1384,11 +1384,10 @@
   height: 100%;
 }
 .meet__water {
-  fill: #0a2a26;
-  opacity: 0.85;
+  fill: rgba(10, 42, 38, 0.55);
 }
 .meet__ripples line {
-  stroke: rgba(232, 220, 192, 0.35);
+  stroke: rgba(232, 220, 192, 0.4);
   stroke-width: 1.5;
   stroke-linecap: round;
 }
