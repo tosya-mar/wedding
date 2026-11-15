@@ -34,7 +34,10 @@ const code: Tok[][] = [
       <div class="hero__content">
         <p class="hero__kicker hero-in" style="--d: 0.1s">Приглашение на свадьбу</p>
         <figure class="hero__portrait hero-in" style="--d: 0.25s">
-          <img class="hero__portrait-img" :src="coupleImg" :alt="`${groom.full} и ${bride.full}`" />
+          <div class="hero__portrait-frame">
+            <img class="hero__portrait-img" :src="coupleImg" :alt="`${groom.full} и ${bride.full}`" />
+          </div>
+          <i class="tape hero__portrait-tape" aria-hidden="true" />
         </figure>
         <h1 class="hero__names hero-in" style="--d: 0.4s">
           <span>{{ theme.id === 'meet' ? groom.full : groom.short }}</span>

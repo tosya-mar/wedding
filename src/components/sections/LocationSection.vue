@@ -11,8 +11,10 @@ const { ceremony, banquet } = wedding
     <SectionTitle kicker="Location" title="Место проведения" />
 
     <article v-reveal class="place">
-      <div class="place__art place__art--cutout" aria-hidden="true">
-        <img class="place__cutout" :src="palaceImg" alt="" />
+      <div class="place__art place__art--scrap" aria-hidden="true">
+        <img class="place__scrap" :src="palaceImg" alt="" />
+        <i class="tape place__tape place__tape--l" />
+        <i class="tape place__tape place__tape--r" />
       </div>
       <p class="place__label">{{ ceremony.title }}</p>
       <p class="place__time">{{ ceremony.time }}</p>

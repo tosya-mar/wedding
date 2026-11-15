@@ -16,7 +16,9 @@ import FinaleSection from './sections/FinaleSection.vue'
 const props = defineProps<{ theme: ThemeDef }>()
 
 const showGreeting = computed(() => props.theme.hero !== 'arch')
-const showPolaroids = computed(() => props.theme.id === 'sage' || props.theme.id === 'petersburg')
+const showPolaroids = computed(
+  () => props.theme.id === 'sage' || props.theme.id === 'petersburg' || props.theme.id === 'meet',
+)
 </script>
 
 <template>

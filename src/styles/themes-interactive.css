@@ -393,51 +393,106 @@
 
 /* ===================== Навстречу друг другу ===================== */
 .theme-meet {
-  --page-bg: #ffffff;
+  --page-bg: #d8d0c2;
   --backdrop:
-    radial-gradient(circle at 18% 12%, rgba(232, 220, 192, 0.35), transparent 42%),
-    radial-gradient(circle at 86% 78%, rgba(46, 107, 95, 0.1), transparent 48%);
+    radial-gradient(circle at 20% 10%, rgba(255, 248, 235, 0.55), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(18, 63, 58, 0.12), transparent 45%),
+    repeating-linear-gradient(0deg, rgba(60, 40, 20, 0.02) 0 2px, transparent 2px 5px);
   --intro-bg: #123f3a;
   --intro-text: #e8dcc0;
-  --surface: #ffffff;
-  --surface-alt: #2e6b5f;
+  --surface: #f6f0e6;
+  --surface-alt: #123f3a;
   --text: #123f3a;
-  --muted: #5d6f68;
+  --muted: #66756e;
   --accent: #6b2737;
-  --line: rgba(18, 63, 58, 0.16);
-  --alt-text: #ffffff;
-  --alt-muted: rgba(255, 255, 255, 0.82);
+  --line: rgba(18, 63, 58, 0.2);
+  --card-bg: #fffdf8;
+  --alt-text: #f6f0e6;
+  --alt-muted: rgba(246, 240, 230, 0.78);
   --alt-accent: #d9b56a;
-  --alt-line: rgba(255, 255, 255, 0.35);
-  --alt-btn-bg: #ffffff;
+  --alt-line: rgba(246, 240, 230, 0.3);
+  --alt-btn-bg: #e8dcc0;
   --alt-btn-text: #123f3a;
   --btn-bg: #123f3a;
-  --btn-radius: 12px;
-  --input-bg: #fff;
-  --input-radius: 12px;
-  --font-display: 'Cormorant Garamond', serif;
+  --btn-radius: 0;
+  --input-bg: #fffdf8;
+  --input-radius: 0;
+  --font-display: 'Amatic SC', sans-serif;
   --font-body: 'Raleway', sans-serif;
-  --font-script: 'Marck Script', cursive;
-  --title-size: 2.2rem;
+  --font-script: 'Caveat', cursive;
+  --title-size: 2.7rem;
+  --title-weight: 700;
+  --title-transform: uppercase;
   --hero-sky:
-    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.85), transparent 45%),
-    linear-gradient(180deg, #dce8e3 0%, #f5f7f6 58%, #ffffff 100%);
+    radial-gradient(circle at 70% 20%, rgba(255, 236, 210, 0.7), transparent 40%),
+    linear-gradient(180deg, #b7c7bf 0%, #e8dcc0 55%, #f6f0e6 100%);
   --hero-text: #123f3a;
   --hero-skyline: #123f3a;
   --particle: #6b2737;
-  --edge-mask: var(--edge-curve);
-  --edge-h: 28px;
+  --edge-mask: var(--edge-torn);
+  --edge-h: 34px;
+}
+.theme-meet .sec {
+  background-image: radial-gradient(rgba(18, 63, 58, 0.045) 1px, transparent 1px);
+  background-size: 7px 7px;
+}
+.theme-meet .sec-title__kicker {
+  display: none;
+}
+.theme-meet .sec-title__main {
+  color: #123f3a;
+}
+.theme-meet .sec-title__main::first-letter {
+  color: var(--accent);
 }
 .theme-meet .hero--scene .hero__kicker {
-  letter-spacing: 0.08em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .theme-meet .hero--scene .hero__names {
   color: #6b2737;
-  font-size: 2.45rem;
+  font-family: var(--font-script);
+  font-size: 2.55rem;
 }
 .theme-meet .hero__portrait {
-  filter: drop-shadow(0 18px 30px rgba(18, 63, 58, 0.2));
+  rotate: -3deg;
+}
+.theme-meet .hero__portrait-frame {
+  background: #fffdf8;
+}
+.theme-meet .btn {
+  padding: 11px 30px;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  clip-path: polygon(2% 14%, 28% 0, 72% 9%, 98% 0, 100% 62%, 95% 100%, 62% 92%, 18% 100%, 0 84%);
+}
+.theme-meet .place {
+  border: 0;
+  border-radius: 0;
+  background: #fffdf8;
+  box-shadow: 0 10px 26px rgba(40, 28, 18, 0.12);
+  rotate: -1.2deg;
+}
+.theme-meet .place--tbd {
+  rotate: 1.4deg;
+  background: #fffdf8;
+}
+.theme-meet .place__art--scrap::after {
+  background: #fffdf8;
+}
+.theme-meet .calendar__note {
+  border-radius: 0;
+  clip-path: polygon(1% 10%, 20% 0, 55% 8%, 98% 0, 100% 70%, 92% 100%, 40% 92%, 0 100%);
+  background: rgba(107, 39, 55, 0.1);
+}
+.theme-meet .dress__dot {
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.12);
 }
 .theme-meet .meet__names {
   font-family: var(--font-script);
@@ -458,13 +513,6 @@
 .theme-meet .meet__city,
 .theme-meet .meet__svg {
   color: #123f3a;
-}
-.theme-meet .place {
-  border-radius: 16px;
-  background: #ffffff;
-}
-.theme-meet .sec-title__kicker {
-  color: #d9b56a;
 }
 
 /* ===================== Золотой контур ===================== */
