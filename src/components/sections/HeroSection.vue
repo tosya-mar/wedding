@@ -3,7 +3,7 @@ import type { ThemeDef } from '../../data/themes'
 import { wedding } from '../../data/wedding'
 import Skyline from '../decor/Skyline.vue'
 import Bouquet from '../decor/Bouquet.vue'
-import coupleImg from '../../assets/couple.png'
+import heroBg from '../../assets/hero-bg.jpg'
 
 defineProps<{ theme: ThemeDef }>()
 
@@ -27,6 +27,10 @@ const code: Tok[][] = [
   <section class="sec hero" :class="`hero--${theme.hero}`">
     <!-- Illustrated full-bleed scene -->
     <template v-if="theme.hero === 'scene'">
+      <div class="hero__photo-bg" aria-hidden="true">
+        <img class="hero__photo-bg-img" :src="heroBg" alt="" />
+      </div>
+      <div class="hero__photo-shade" aria-hidden="true" />
       <div class="hero__sky" />
       <div class="hero__glow" />
       <Bouquet v-if="theme.heroArt === 'bouquet'" class="hero__bouquet hero__bouquet--l" />
@@ -41,9 +45,6 @@ const code: Tok[][] = [
         <p class="hero__date hero-in" style="--d: 0.5s">{{ dateShort }}</p>
         <p class="hero__city hero-in" style="--d: 0.65s">{{ city }}</p>
       </div>
-      <figure class="hero__portrait hero__portrait--cutout hero__portrait--skyline hero-in" style="--d: 0.75s">
-        <img class="hero__portrait-img" :src="coupleImg" :alt="`${groom.full} и ${bride.full}`" />
-      </figure>
       <Skyline class="hero__skyline" water />
       <div class="hero__scroll" aria-hidden="true">
         <span />

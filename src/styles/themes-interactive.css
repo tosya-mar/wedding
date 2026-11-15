@@ -418,19 +418,21 @@
   --btn-radius: 999px;
   --input-bg: #fff;
   --input-radius: 14px;
-  --font-display: 'Cormorant Garamond', serif;
-  --font-body: 'Raleway', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
   --font-script: 'Caveat', cursive;
-  --title-size: 2.35rem;
-  --title-weight: 500;
+  --title-size: 1.7rem;
+  --title-weight: 700;
   --title-transform: none;
+  --title-spacing: -0.02em;
   --hero-sky:
-    radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.9), transparent 36%),
-    radial-gradient(circle at 78% 12%, rgba(217, 181, 106, 0.28), transparent 34%),
-    linear-gradient(180deg, #cfe6de 0%, #e9f3ee 48%, #fcfbf8 100%);
-  --hero-text: #1c4740;
-  --hero-skyline: #2e6b5f;
-  --particle: #e7a3a8;
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.95), transparent 34%),
+    radial-gradient(circle at 88% 8%, rgba(255, 170, 180, 0.22), transparent 32%),
+    radial-gradient(circle at 70% 40%, rgba(90, 190, 170, 0.18), transparent 40%),
+    linear-gradient(165deg, #d8f0e8 0%, #f4fbf8 42%, #fff7f5 100%);
+  --hero-text: #163f39;
+  --hero-skyline: #1f6a5c;
+  --particle: #ff8fa0;
   --edge-mask: var(--edge-curve);
   --edge-h: 18px;
 }
@@ -453,10 +455,25 @@
   margin-bottom: 16px;
 }
 .theme-meet .hero--scene .hero__content {
-  padding: 48px 22px 220px;
+  padding: 48px 22px 180px;
+}
+.theme-meet .hero--scene .hero__sky {
+  background: transparent;
 }
 .theme-meet .hero__glow {
-  background: radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.65), transparent 46%);
+  display: none;
+}
+.theme-meet .hero__photo-shade {
+  background:
+    linear-gradient(180deg, rgba(12, 36, 32, 0.35) 0%, rgba(12, 36, 32, 0.18) 40%, rgba(12, 36, 32, 0.55) 100%),
+    radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, 0.22), transparent 58%);
+}
+.theme-meet .hero--scene .hero__skyline {
+  display: none;
+}
+.theme-meet .hero__scroll {
+  color: rgba(255, 250, 244, 0.9);
+  border-color: rgba(255, 250, 244, 0.75);
 }
 .theme-meet .countdown__title {
   margin-bottom: 12px;
@@ -464,8 +481,28 @@
 .theme-meet .countdown__grid {
   gap: 0;
 }
+.theme-meet .countdown {
+  padding: 8px 4px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(46, 107, 95, 0.08);
+}
+.theme-meet .countdown__title {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
 .theme-meet .countdown__value {
-  color: #2e6b5f;
+  color: #163f39;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.theme-meet .countdown__label {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
 }
 .theme-meet .timing {
   padding-top: 0;
@@ -479,33 +516,90 @@
   }
 }
 .theme-meet .sec-title__kicker {
-  color: #c45b63;
+  display: inline-flex;
+  margin: 0 auto;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 143, 160, 0.14);
+  color: #e35d72;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 .theme-meet .sec-title__main {
-  color: #1c4740;
+  margin-top: 10px;
+  color: #163f39;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
-.theme-meet .sec--alt .sec-title__main,
+.theme-meet .sec--alt .sec-title__main {
+  color: #163f39;
+}
 .theme-meet .sec--alt .sec-title__kicker {
-  color: #1c4740;
+  background: rgba(46, 107, 95, 0.12);
+  color: #2e6b5f;
 }
 .theme-meet .hero--scene .hero__kicker {
-  letter-spacing: 0.06em;
+  width: fit-content;
+  max-width: 92%;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 28px rgba(12, 36, 32, 0.18);
+  font-family: var(--font-body);
+  font-size: clamp(0.72rem, 3.4cqi, 0.84rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
   text-transform: uppercase;
+  text-shadow: none;
   color: #2e6b5f;
 }
 .theme-meet .hero--scene .hero__names {
-  color: #c45b63;
+  gap: 0.15em;
+  margin-top: 0.7em;
+  color: #fffaf4;
   font-family: var(--font-script);
-  font-size: 2.55rem;
+  font-size: clamp(2.7rem, 13vw, 3.3rem);
+  font-weight: 600;
+  text-shadow: 0 8px 28px rgba(12, 36, 32, 0.45);
 }
-.theme-meet .hero__portrait--skyline {
-  bottom: 42px;
-  width: min(54vw, 220px);
-  filter: drop-shadow(0 16px 28px rgba(46, 107, 95, 0.22));
+.theme-meet .hero--scene .hero__amp {
+  color: #ff9aab;
+}
+.theme-meet .hero--scene .hero__date {
+  margin-top: 0.45em;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: rgba(255, 250, 244, 0.92);
+  text-shadow: 0 4px 16px rgba(12, 36, 32, 0.4);
+}
+.theme-meet .hero__city {
+  display: inline-flex;
+  margin-top: 0.85em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #e35d72;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  box-shadow: 0 8px 20px rgba(12, 36, 32, 0.16);
 }
 .theme-meet .btn {
   border-radius: 999px;
   clip-path: none;
+  background: linear-gradient(135deg, #ff7f92, #e35d72);
+  box-shadow: 0 12px 24px rgba(227, 93, 114, 0.28);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.theme-meet .place .btn {
   background: linear-gradient(135deg, #3a8576, #2e6b5f);
   box-shadow: 0 10px 22px rgba(46, 107, 95, 0.25);
 }
@@ -569,8 +663,31 @@
   box-shadow: 0 4px 12px rgba(46, 107, 95, 0.1);
 }
 .theme-meet .timing__time {
-  color: #c45b63;
-  font-family: var(--font-display);
+  color: #e35d72;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.theme-meet .timing__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.theme-meet .greeting__title {
+  font-family: var(--font-script);
+  font-size: 2.4rem;
+  color: #163f39;
+}
+.theme-meet .details__title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.theme-meet .finale__title {
+  font-family: var(--font-script);
+  font-size: 3.2rem;
+}
+.theme-meet .finale__sign {
   font-size: 1.55rem;
 }
 .theme-meet .dress__dot {
