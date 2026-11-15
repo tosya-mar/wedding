@@ -307,7 +307,7 @@ export const themes: ThemeDef[] = [
     id: 'meet',
     name: 'Навстречу друг другу',
     hint: 'Коллаж, рваные края, полароиды и мост навстречу',
-    swatch: ['#123f3a', '#f6f0e6', '#6b2737'],
+    swatch: ['#2e6b5f', '#fcfbf8', '#c45b63'],
     hero: 'scene',
     heroArt: 'skyline',
     particles: 'hearts',
@@ -320,7 +320,7 @@ export const themes: ThemeDef[] = [
       { color: '#2e6b5f', name: 'малахит' },
       { color: '#d9b56a', name: 'золото' },
       { color: '#e8dcc0', name: 'шампань' },
-      { color: '#6b2737', name: 'марсала' },
+      { color: '#c45b63', name: 'марсала' },
     ],
   },
   {

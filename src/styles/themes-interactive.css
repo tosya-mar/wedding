@@ -393,29 +393,31 @@
 
 /* ===================== Навстречу друг другу ===================== */
 .theme-meet {
-  --page-bg: #123f3a;
+  --page-bg: #e7f1ec;
   --backdrop:
-    radial-gradient(circle at 20% 10%, rgba(46, 107, 95, 0.35), transparent 42%),
-    radial-gradient(circle at 80% 85%, rgba(107, 39, 55, 0.18), transparent 48%);
-  --intro-bg: #123f3a;
-  --intro-text: #e8dcc0;
-  --surface: #f6f0e6;
-  --surface-alt: #f6f0e6;
-  --text: #123f3a;
-  --muted: #66756e;
-  --accent: #6b2737;
-  --line: rgba(18, 63, 58, 0.18);
-  --card-bg: #fffdf8;
-  --alt-text: #123f3a;
-  --alt-muted: #66756e;
-  --alt-accent: #6b2737;
-  --alt-line: rgba(18, 63, 58, 0.18);
-  --alt-btn-bg: #123f3a;
-  --alt-btn-text: #f6f0e6;
-  --btn-bg: #123f3a;
-  --btn-radius: 12px;
-  --input-bg: #fffdf8;
-  --input-radius: 10px;
+    radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.9), transparent 42%),
+    radial-gradient(circle at 82% 78%, rgba(46, 107, 95, 0.16), transparent 48%),
+    radial-gradient(circle at 50% 100%, rgba(217, 181, 106, 0.12), transparent 40%);
+  --intro-bg:
+    radial-gradient(circle at 50% 28%, #1f5a50, #123f3a 68%);
+  --intro-text: #f4efe4;
+  --surface: #fcfbf8;
+  --surface-alt: #eef6f2;
+  --text: #1c4740;
+  --muted: #6e857d;
+  --accent: #c45b63;
+  --line: rgba(46, 107, 95, 0.16);
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --alt-text: #1c4740;
+  --alt-muted: #6e857d;
+  --alt-accent: #c45b63;
+  --alt-line: rgba(46, 107, 95, 0.16);
+  --alt-btn-bg: #2e6b5f;
+  --alt-btn-text: #fff;
+  --btn-bg: #2e6b5f;
+  --btn-radius: 999px;
+  --input-bg: #fff;
+  --input-radius: 14px;
   --font-display: 'Cormorant Garamond', serif;
   --font-body: 'Raleway', sans-serif;
   --font-script: 'Caveat', cursive;
@@ -423,19 +425,26 @@
   --title-weight: 500;
   --title-transform: none;
   --hero-sky:
-    radial-gradient(circle at 70% 20%, rgba(255, 236, 210, 0.55), transparent 40%),
-    linear-gradient(180deg, #d5e3dc 0%, #e8dcc0 55%, #f6f0e6 100%);
-  --hero-text: #123f3a;
-  --hero-skyline: #123f3a;
-  --particle: #6b2737;
+    radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.9), transparent 36%),
+    radial-gradient(circle at 78% 12%, rgba(217, 181, 106, 0.28), transparent 34%),
+    linear-gradient(180deg, #cfe6de 0%, #e9f3ee 48%, #fcfbf8 100%);
+  --hero-text: #1c4740;
+  --hero-skyline: #2e6b5f;
+  --particle: #e7a3a8;
   --edge-mask: var(--edge-curve);
   --edge-h: 18px;
 }
 .theme-meet .invite {
   background: var(--surface);
+  box-shadow: 0 18px 50px rgba(28, 71, 64, 0.1);
 }
 .theme-meet .sec {
   padding: 36px 24px;
+}
+.theme-meet .sec--alt {
+  background:
+    radial-gradient(circle at 80% 0%, rgba(46, 107, 95, 0.08), transparent 45%),
+    var(--surface-alt);
 }
 .theme-meet .sec--finale {
   padding-bottom: 72px;
@@ -446,11 +455,17 @@
 .theme-meet .hero--scene .hero__content {
   padding: 48px 22px 220px;
 }
+.theme-meet .hero__glow {
+  background: radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.65), transparent 46%);
+}
 .theme-meet .countdown__title {
   margin-bottom: 12px;
 }
 .theme-meet .countdown__grid {
   gap: 0;
+}
+.theme-meet .countdown__value {
+  color: #2e6b5f;
 }
 .theme-meet .timing {
   padding-top: 0;
@@ -464,60 +479,71 @@
   }
 }
 .theme-meet .sec-title__kicker {
-  color: #d9b56a;
+  color: #c45b63;
 }
 .theme-meet .sec-title__main {
-  color: #123f3a;
+  color: #1c4740;
 }
 .theme-meet .sec--alt .sec-title__main,
 .theme-meet .sec--alt .sec-title__kicker {
-  color: #123f3a;
+  color: #1c4740;
 }
 .theme-meet .hero--scene .hero__kicker {
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: #2e6b5f;
 }
 .theme-meet .hero--scene .hero__names {
-  color: #6b2737;
+  color: #c45b63;
   font-family: var(--font-script);
   font-size: 2.55rem;
 }
 .theme-meet .hero__portrait--skyline {
   bottom: 42px;
   width: min(54vw, 220px);
+  filter: drop-shadow(0 16px 28px rgba(46, 107, 95, 0.22));
 }
 .theme-meet .btn {
-  border-radius: 12px;
+  border-radius: 999px;
   clip-path: none;
+  background: linear-gradient(135deg, #3a8576, #2e6b5f);
+  box-shadow: 0 10px 22px rgba(46, 107, 95, 0.25);
 }
 .theme-meet .place {
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: #fffdf8;
-  box-shadow: 0 10px 26px rgba(40, 28, 18, 0.1);
+  border: 1px solid rgba(46, 107, 95, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 28px rgba(46, 107, 95, 0.08);
   rotate: 0deg;
 }
 .theme-meet .place--tbd {
   rotate: 0deg;
   border-style: dashed;
+  background: rgba(255, 255, 255, 0.72);
 }
 .theme-meet .place__art--scrap {
   rotate: 0deg;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   width: 100%;
   margin: 0 0 16px;
   padding: 0;
   box-shadow: none;
+  background: linear-gradient(180deg, #eef7f3, #fff);
 }
 .theme-meet .place__art--scrap::after,
 .theme-meet .place__tape {
   display: none;
 }
-.theme-meet .calendar__note {
-  border-radius: 999px;
-  clip-path: none;
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
+.theme-meet .place__time {
+  color: #2e6b5f;
+}
+.theme-meet .calendar__heart {
+  stroke: #c45b63;
+}
+.theme-meet .calendar__day.is-wedding {
+  color: #c45b63;
 }
 .theme-meet .timing {
   max-width: 360px;
@@ -525,43 +551,45 @@
   padding: 8px 6px 4px;
 }
 .theme-meet .timing__item {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   padding: 14px 14px 14px 8px !important;
-  border-radius: 16px;
-  background: #fffdf8;
-  box-shadow: 0 8px 20px rgba(18, 63, 58, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 20px rgba(46, 107, 95, 0.07);
 }
 .theme-meet .timing--timeline .timing__list::before {
   left: 35px;
-  background: #d9b56a;
-  opacity: 0.55;
+  background: linear-gradient(#d9b56a, #2e6b5f);
+  opacity: 0.45;
 }
 .theme-meet .timing--timeline .timing__icon {
-  border-color: #d9b56a;
-  background: #fffdf8;
-  color: #123f3a;
-  box-shadow: 0 4px 12px rgba(18, 63, 58, 0.1);
+  border-color: rgba(46, 107, 95, 0.28);
+  background: #fff;
+  color: #2e6b5f;
+  box-shadow: 0 4px 12px rgba(46, 107, 95, 0.1);
 }
 .theme-meet .timing__time {
-  color: #6b2737;
+  color: #c45b63;
   font-family: var(--font-display);
   font-size: 1.55rem;
+}
+.theme-meet .dress__dot {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 8px 18px rgba(46, 107, 95, 0.14);
 }
 .theme-meet .finale {
   padding-bottom: 20px;
 }
-.theme-meet .finale__photo {
-  background: #fffdf8;
-}
 .theme-meet .finale__title {
-  color: #123f3a;
+  color: #1c4740;
 }
 .theme-meet .finale__sign {
-  color: #6b2737;
+  color: #c45b63;
 }
 .theme-meet .finale__skyline {
-  color: #123f3a;
-  opacity: 0.35;
+  color: #2e6b5f;
+  opacity: 0.4;
   margin-bottom: -80px;
 }
 .theme-meet .meet__names {
@@ -571,18 +599,18 @@
 }
 .theme-meet .intro__hint {
   font-family: var(--font-script);
-  color: #e8dcc0;
+  color: #f4efe4;
 }
 .theme-meet .intro__tap {
-  color: rgba(232, 220, 192, 0.75);
+  color: rgba(244, 239, 228, 0.72);
 }
 .theme-meet .intro__skip {
-  color: #e8dcc0;
-  border-color: rgba(232, 220, 192, 0.45);
+  color: #f4efe4;
+  border-color: rgba(244, 239, 228, 0.4);
 }
 .theme-meet .meet__city {
   color: #e8dcc0;
-  opacity: 0.4;
+  opacity: 0.42;
 }
 .theme-meet .meet__svg {
   color: #e8dcc0;
@@ -594,8 +622,16 @@
 .theme-meet .ticket {
   display: none;
 }
-.theme-meet .polaroid {
-  box-shadow: 0 12px 26px rgba(18, 63, 58, 0.14);
+.theme-meet .field__input {
+  border-radius: 14px;
+  background: #fff;
+  border-color: rgba(46, 107, 95, 0.18);
+}
+.theme-meet .rsvp__form {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 22px;
+  padding: 18px 16px;
+  box-shadow: 0 12px 30px rgba(46, 107, 95, 0.08);
 }
 
 /* ===================== Золотой контур ===================== */
