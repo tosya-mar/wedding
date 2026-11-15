@@ -22,6 +22,6 @@ defineProps<{ theme: ThemeDef }>()
         <span class="dress__name">{{ c.name }}</span>
       </li>
     </ul>
-    <p v-reveal class="dress__note">{{ wedding.dressCode.note }}</p>
+    <p v-if="wedding.dressCode.note" v-reveal class="dress__note">{{ wedding.dressCode.note }}</p>
   </div>
 </template>

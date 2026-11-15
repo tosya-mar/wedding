@@ -4,15 +4,21 @@ import { wedding } from '../../data/wedding'
 import SectionTitle from '../SectionTitle.vue'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
+type Attending = '' | 'yes' | 'no' | 'maybe'
 
 const STORAGE_KEY = 'wedding:rsvp-sent'
 const ENDPOINT = `https://formsubmit.co/ajax/${wedding.rsvpEmail}`
 
+const attendLabels: Record<Exclude<Attending, ''>, string> = {
+  yes: 'Да, с радостью приду',
+  no: 'Нет, к сожалению, не получится',
+  maybe: 'Пока не уверен(а), сообщу',
+}
+
 const form = reactive({
   name: '',
-  attending: '' as '' | 'yes' | 'no',
-  guests: 1,
-  companions: '',
+  attending: '' as Attending,
+  composition: '',
   alcohol: [] as string[],
   comment: '',
   honey: '',
@@ -22,7 +28,7 @@ const status = ref<Status>(localStorage.getItem(STORAGE_KEY) ? 'sent' : 'idle')
 const errorText = ref('')
 const touched = ref(false)
 
-const isAttending = computed(() => form.attending === 'yes')
+const showsDetails = computed(() => form.attending === 'yes' || form.attending === 'maybe')
 const nameError = computed(() => touched.value && !form.name.trim())
 const attendError = computed(() => touched.value && !form.attending)
 
@@ -39,11 +45,10 @@ const payload = computed(() => {
     _captcha: 'false',
     _honey: form.honey,
     'Имя и фамилия': form.name.trim(),
-    'Присутствие': isAttending.value ? 'Придёт с удовольствием' : 'К сожалению, не сможет',
+    'Присутствие': form.attending ? attendLabels[form.attending] : '',
   }
-  if (isAttending.value) {
-    data['Количество человек (включая гостя)'] = String(form.guests)
-    if (form.guests > 1) data['Спутники'] = form.companions.trim() || '—'
+  if (showsDetails.value) {
+    data['В каком составе'] = form.composition.trim() || '—'
     data['Предпочтения по алкоголю'] = form.alcohol.join(', ') || '—'
   }
   if (form.comment.trim()) data['Комментарий'] = form.comment.trim()
@@ -115,50 +120,49 @@ function again() {
             type="text"
             name="name"
             autocomplete="name"
-            placeholder="Например, Анна Иванова"
+            placeholder="Иван Иванов"
           />
           <span v-if="nameError" class="field__error">Пожалуйста, представьтесь</span>
         </label>
 
         <fieldset class="field">
-          <legend class="field__label">Сможете ли вы прийти?</legend>
+          <legend class="field__label">Планируете ли вы присутствовать?</legend>
           <label class="choice">
             <input v-model="form.attending" type="radio" name="attending" value="yes" />
             <span class="choice__mark choice__mark--radio" />
-            <span>С удовольствием приду!</span>
+            <span>Да, с радостью приду</span>
           </label>
           <label class="choice">
             <input v-model="form.attending" type="radio" name="attending" value="no" />
             <span class="choice__mark choice__mark--radio" />
-            <span>К сожалению, не смогу</span>
+            <span>Нет, к сожалению, не получится</span>
+          </label>
+          <label class="choice">
+            <input v-model="form.attending" type="radio" name="attending" value="maybe" />
+            <span class="choice__mark choice__mark--radio" />
+            <span>Пока не уверен(а), сообщу</span>
           </label>
           <span v-if="attendError" class="field__error">Выберите вариант</span>
         </fieldset>
 
         <Transition name="expand">
-          <div v-if="isAttending" class="rsvp__more">
-            <div class="field">
-              <span class="field__label">Сколько вас будет, включая вас?</span>
-              <div class="stepper">
-                <button type="button" :disabled="form.guests <= 1" aria-label="Меньше" @click="form.guests--">−</button>
-                <output>{{ form.guests }}</output>
-                <button type="button" :disabled="form.guests >= 6" aria-label="Больше" @click="form.guests++">+</button>
-              </div>
-            </div>
-
-            <label v-if="form.guests > 1" class="field">
-              <span class="field__label">Как зовут ваших спутников?</span>
+          <div v-if="showsDetails" class="rsvp__more">
+            <label class="field">
+              <span class="field__label">В каком составе вы планируете присутствовать</span>
               <input
-                v-model="form.companions"
+                v-model="form.composition"
                 class="field__input"
                 type="text"
-                name="companions"
-                placeholder="Имена через запятую"
+                name="composition"
+                placeholder="Анна, Иван, Стас"
               />
             </label>
 
             <fieldset class="field">
-              <legend class="field__label">Что предпочитаете из напитков?</legend>
+              <legend class="field__label">
+                Предпочтения по алкоголю
+                <small>Можно выбрать несколько вариантов</small>
+              </legend>
               <div class="choice-grid">
                 <label v-for="opt in wedding.alcoholOptions" :key="opt" class="choice">
                   <input v-model="form.alcohol" type="checkbox" :value="opt" @change="toggleNoAlcohol(opt)" />

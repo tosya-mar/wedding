@@ -429,8 +429,7 @@
   --edge-h: 28px;
 }
 .theme-meet .hero--scene .hero__kicker {
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .theme-meet .hero--scene .hero__names {

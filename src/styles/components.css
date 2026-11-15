@@ -268,9 +268,9 @@
 .hero--scene .hero__kicker {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 13vw, 4rem);
-  line-height: 0.95;
-  letter-spacing: 0.08em;
+  font-size: clamp(3.35rem, 16vw, 5rem);
+  line-height: 0.92;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 }
@@ -955,6 +955,21 @@
   margin: 0 auto 14px;
   color: var(--accent);
 }
+.place__art--photo {
+  width: min(100%, 300px);
+  overflow: hidden;
+  border-radius: 6px;
+  line-height: 0;
+  box-shadow: 0 10px 28px rgba(40, 28, 18, 0.12);
+}
+.place__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center 35%;
+  aspect-ratio: 5 / 4;
+}
 .place__art .palace__wall {
   opacity: 0.22;
 }
@@ -1183,6 +1198,8 @@
   text-transform: uppercase;
 }
 .field__label small {
+  display: block;
+  margin-top: 4px;
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
