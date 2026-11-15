@@ -397,8 +397,8 @@
   --backdrop:
     radial-gradient(circle at 18% 12%, rgba(232, 220, 192, 0.35), transparent 42%),
     radial-gradient(circle at 86% 78%, rgba(46, 107, 95, 0.1), transparent 48%);
-  --intro-bg: #ffffff;
-  --intro-text: #123f3a;
+  --intro-bg: #123f3a;
+  --intro-text: #e8dcc0;
   --surface: #ffffff;
   --surface-alt: #2e6b5f;
   --text: #123f3a;
@@ -415,9 +415,9 @@
   --btn-radius: 12px;
   --input-bg: #fff;
   --input-radius: 12px;
-  --font-display: 'Lora', serif;
-  --font-body: 'Montserrat', sans-serif;
-  --font-script: 'Caveat', cursive;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Marck Script', cursive;
   --title-size: 2.2rem;
   --hero-sky:
     radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.85), transparent 45%),
@@ -437,8 +437,20 @@
   font-size: 2.45rem;
 }
 .theme-meet .meet__names {
+  font-family: var(--font-script);
   font-size: 2.1rem;
-  color: #6b2737;
+  color: #d9b56a;
+}
+.theme-meet .intro__hint {
+  font-family: var(--font-script);
+  color: #e8dcc0;
+}
+.theme-meet .intro__tap {
+  color: rgba(232, 220, 192, 0.75);
+}
+.theme-meet .intro__skip {
+  color: #e8dcc0;
+  border-color: rgba(232, 220, 192, 0.45);
 }
 .theme-meet .meet__city,
 .theme-meet .meet__svg {
