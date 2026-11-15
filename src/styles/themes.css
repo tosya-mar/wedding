@@ -1,0 +1,671 @@
+/* =====================================================================
+   1. Зимний сад — olive greenery, torn paper, thin display font
+   ===================================================================== */
+.theme-garden {
+  --page-bg: #c9d0bf;
+  --backdrop:
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.55), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(95, 110, 85, 0.45), transparent 50%),
+    radial-gradient(circle at 80% 10%, rgba(240, 240, 228, 0.6), transparent 35%);
+  --surface: #f3f3ee;
+  --surface-alt: #66735c;
+  --text: #2f3a2c;
+  --muted: #6f786a;
+  --accent: #5d6b53;
+  --line: rgba(47, 58, 44, 0.22);
+  --alt-text: #f6f6f0;
+  --alt-muted: rgba(246, 246, 240, 0.75);
+  --alt-accent: #e9e7cf;
+  --alt-line: rgba(255, 255, 255, 0.35);
+  --alt-btn-bg: #f3f3ee;
+  --alt-btn-text: #3f4b38;
+  --btn-bg: #4f5d46;
+  --btn-radius: 2px;
+  --input-bg: #fff;
+  --font-display: 'Poiret One', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Marck Script', cursive;
+  --title-size: 3rem;
+  --hero-sky:
+    radial-gradient(ellipse at 50% 110%, #5f6f55 10%, transparent 55%),
+    linear-gradient(180deg, #9fae9a 0%, #c4ccb9 45%, #8e9c82 100%);
+  --hero-skyline: rgba(52, 66, 47, 0.8);
+  --leaf: #4c5d44;
+  --flower: #f5f3ea;
+  --flower-inner: #fff;
+  --flower-line: #cfd2c0;
+  --flower-core: #d8c98a;
+  --particle: #8a9a7c;
+  --edge-mask: var(--edge-torn);
+  --edge-h: 30px;
+}
+.theme-garden .sec-title {
+  display: flex;
+  flex-direction: column;
+}
+.theme-garden .sec-title__kicker {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+.theme-garden .sec-title__main {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  margin-top: 6px;
+}
+.theme-garden .greeting__title,
+.theme-garden .countdown__title {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+.theme-garden .countdown__value,
+.theme-garden .timing__time {
+  font-family: var(--font-display);
+}
+.theme-garden .sec--alt .place,
+.theme-garden .sec--alt .details__item {
+  border-color: var(--line);
+}
+
+/* =====================================================================
+   2. Нежность — airy, sage blocks, script greeting, polaroids
+   ===================================================================== */
+.theme-sage {
+  --page-bg: #e5e4df;
+  --backdrop:
+    radial-gradient(circle at 80% 20%, rgba(167, 179, 154, 0.35), transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(217, 208, 193, 0.6), transparent 45%);
+  --surface: #f8f7f3;
+  --surface-alt: #a9b49b;
+  --text: #34392f;
+  --muted: #7a7d74;
+  --accent: #46523c;
+  --line: rgba(52, 57, 47, 0.2);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.85);
+  --alt-accent: #fff;
+  --alt-line: rgba(255, 255, 255, 0.5);
+  --alt-btn-bg: #46523c;
+  --alt-btn-text: #fff;
+  --btn-bg: #46523c;
+  --btn-radius: 10px;
+  --input-bg: #fff;
+  --input-radius: 10px;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Bad Script', cursive;
+  --title-size: 2.5rem;
+  --title-weight: 500;
+  --title-transform: uppercase;
+  --title-spacing: 0.06em;
+  --hero-sky:
+    radial-gradient(ellipse at 50% 0%, #e8ddd2 0%, transparent 60%),
+    linear-gradient(180deg, #cdbcaf 0%, #a89585 55%, #7d6d62 100%);
+  --hero-skyline: rgba(45, 36, 32, 0.75);
+  --particle: #f1e3dc;
+  --edge-mask: var(--edge-torn);
+  --edge-h: 28px;
+}
+.theme-sage .sec-title__kicker {
+  display: none;
+}
+.theme-sage .hero--scene .hero__kicker {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+.theme-sage .hero--scene .hero__names {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 10vw, 3rem);
+  letter-spacing: 0.04em;
+}
+.theme-sage .greeting__title,
+.theme-sage .countdown__title {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+}
+.theme-sage .calendar__month {
+  font-family: var(--font-script);
+}
+.theme-sage .sec--alt .place {
+  background: rgba(255, 255, 255, 0.12);
+}
+.theme-sage .ticket {
+  background: #fff;
+}
+
+/* =====================================================================
+   3. Петербург — collage, tape, red accents, typewriter text
+   ===================================================================== */
+.theme-petersburg {
+  --page-bg: #d9d2c7;
+  --backdrop:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.015) 0 2px, transparent 2px 4px),
+    radial-gradient(circle at 50% 0, #e8e1d6, #cfc6b8 70%);
+  --surface: #f4eee4;
+  --surface-alt: #ebe2d3;
+  --text: #3b302a;
+  --muted: #7a6c62;
+  --accent: #b3261e;
+  --line: rgba(59, 48, 42, 0.25);
+  --btn-bg: #6b5444;
+  --btn-radius: 0;
+  --input-bg: #fffaf2;
+  --input-border: rgba(59, 48, 42, 0.35);
+  --font-display: 'Amatic SC', sans-serif;
+  --font-body: 'PT Mono', monospace;
+  --font-script: 'Caveat', cursive;
+  --title-size: 2.8rem;
+  --title-weight: 700;
+  --title-transform: uppercase;
+  --hero-sky:
+    radial-gradient(circle at 75% 25%, rgba(255, 240, 220, 0.8), transparent 35%),
+    linear-gradient(180deg, #9fb0bd 0%, #c9cbc6 50%, #e6dccb 80%);
+  --hero-skyline: #3f3530;
+  --particle: #c7372f;
+  --edge-mask: var(--edge-torn);
+  --edge-h: 34px;
+  font-size: 14px;
+}
+.theme-petersburg .sec {
+  background-image: radial-gradient(rgba(120, 90, 60, 0.05) 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+.theme-petersburg .sec-title__kicker {
+  display: none;
+}
+.theme-petersburg .sec-title__main {
+  color: #6b4a3a;
+}
+.theme-petersburg .sec-title__main::first-letter {
+  color: var(--accent);
+}
+.theme-petersburg .greeting__title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #6b4a3a;
+}
+.theme-petersburg .greeting__text::first-line {
+  color: var(--accent);
+}
+.theme-petersburg .calendar__month,
+.theme-petersburg .countdown__value,
+.theme-petersburg .timing__time,
+.theme-petersburg .place__time,
+.theme-petersburg .stepper output {
+  font-weight: 700;
+}
+.theme-petersburg .calendar__month {
+  font-size: 2.4rem;
+}
+.theme-petersburg .countdown__title,
+.theme-petersburg .details__title,
+.theme-petersburg .place__name {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.theme-petersburg .countdown__value {
+  font-size: 3.2rem;
+  color: var(--accent);
+}
+.theme-petersburg .timing__time {
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+.theme-petersburg .btn {
+  padding: 10px 34px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  clip-path: polygon(2% 12%, 30% 0, 70% 8%, 98% 0, 100% 60%, 96% 100%, 60% 92%, 20% 100%, 0 85%);
+}
+.theme-petersburg .btn--ghost {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+}
+.theme-petersburg .place {
+  border: 0;
+  background: #fffaf2;
+  box-shadow: 0 8px 22px rgba(60, 40, 20, 0.12);
+  rotate: -1deg;
+}
+.theme-petersburg .place--tbd {
+  rotate: 1.2deg;
+}
+.theme-petersburg .ornament {
+  color: var(--accent);
+}
+.theme-petersburg .ticket__date {
+  font-weight: 700;
+}
+.theme-petersburg .hero__photo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 3;
+  height: 34px;
+  background: var(--surface);
+  -webkit-mask: var(--edge-torn) center / 100% 100% no-repeat;
+  mask: var(--edge-torn) center / 100% 100% no-repeat;
+}
+
+/* =====================================================================
+   4. Монохром — black & white, arches and blobs
+   ===================================================================== */
+.theme-mono {
+  --page-bg: #8f8f8f;
+  --backdrop:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.35), transparent 40%),
+    linear-gradient(135deg, #a5a5a5, #6d6d6d);
+  --surface: #ffffff;
+  --surface-alt: #2b2b2b;
+  --text: #111;
+  --muted: #666;
+  --accent: #111;
+  --line: rgba(0, 0, 0, 0.25);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.7);
+  --alt-accent: #fff;
+  --alt-line: rgba(255, 255, 255, 0.3);
+  --alt-btn-bg: #fff;
+  --alt-btn-text: #111;
+  --btn-bg: #3a3a3a;
+  --btn-radius: 999px;
+  --input-border: #111;
+  --font-display: 'Forum', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Marck Script', cursive;
+  --title-size: 2.8rem;
+  --title-transform: uppercase;
+  --title-spacing: 0.04em;
+  --edge-mask: var(--edge-curve);
+  --edge-h: 40px;
+}
+.theme-mono .sec-title__kicker {
+  font-size: 1.3rem;
+}
+.theme-mono .calendar {
+  padding: 22px 18px 18px;
+  border-radius: 46px 0 46px 0;
+  background: #4a4a4a;
+  color: #fff;
+  --line: rgba(255, 255, 255, 0.35);
+  --muted: rgba(255, 255, 255, 0.7);
+  --accent: #fff;
+}
+.theme-mono .calendar__month {
+  font-family: var(--font-script);
+  font-size: 2.2rem;
+}
+.theme-mono .calendar__heart {
+  stroke: #e04646;
+  stroke-width: 2.5;
+}
+.theme-mono .place__art {
+  width: 230px;
+  padding: 26px 10px 16px;
+  border-radius: 58% 42% 50% 50% / 55% 50% 50% 45%;
+  background: #1b1b1b;
+  color: #fff;
+}
+.theme-mono .place {
+  border: 0;
+}
+.theme-mono .place--tbd {
+  border: 1px dashed var(--line);
+  border-radius: 30px;
+}
+.theme-mono .dress__dot {
+  width: 80px;
+  height: 36px;
+  border-radius: 0;
+}
+.theme-mono .dress__swatch {
+  width: 90px;
+}
+.theme-mono .finale__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 2.8rem;
+}
+.theme-mono .rsvp__form {
+  padding: 20px;
+  border: 1px solid #111;
+}
+.theme-mono .field__input {
+  border-width: 0 0 1px;
+  padding-left: 0;
+}
+
+/* =====================================================================
+   5. Шёлк и сургуч — beige & chocolate, silk waves, wax seals
+   ===================================================================== */
+.theme-silk {
+  --page-bg: #d8cbb8;
+  --backdrop:
+    radial-gradient(ellipse at 30% 20%, rgba(255, 250, 240, 0.7), transparent 50%),
+    radial-gradient(ellipse at 70% 90%, rgba(120, 95, 70, 0.3), transparent 50%);
+  --surface: #f0e8dc;
+  --surface-alt: #5b4637;
+  --text: #4a3a2e;
+  --muted: #86735f;
+  --accent: #8c6a4c;
+  --line: rgba(74, 58, 46, 0.25);
+  --alt-text: #f3ebdf;
+  --alt-muted: rgba(243, 235, 223, 0.75);
+  --alt-accent: #e2cba5;
+  --alt-line: rgba(243, 235, 223, 0.3);
+  --alt-btn-bg: #f0e8dc;
+  --alt-btn-text: #5b4637;
+  --btn-bg: #5b4637;
+  --btn-radius: 4px;
+  --input-bg: #5b4637;
+  --input-border: #5b4637;
+  --input-radius: 4px;
+  --font-display: 'Prata', serif;
+  --font-body: 'Lora', serif;
+  --font-script: 'Marck Script', cursive;
+  --title-size: 2rem;
+  --title-transform: uppercase;
+  --title-spacing: 0.06em;
+  --hero-sky: linear-gradient(180deg, #e9dfd0 0%, #d8c6ae 70%, #c3ab8e 100%);
+  --hero-skyline: rgba(91, 70, 55, 0.55);
+  --leaf: #6f7d58;
+  --flower: #fbf6ee;
+  --flower-inner: #fff;
+  --flower-line: #dfd3c0;
+  --flower-core: #c9a774;
+  --particle: #eadccb;
+  --seal: #b8955a;
+  --seal-text: rgba(90, 60, 25, 0.75);
+  --edge-mask: var(--edge-wave);
+  --edge-h: 36px;
+}
+.theme-silk .sec-title__kicker {
+  display: none;
+}
+.theme-silk .sec-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 1px;
+  margin: 12px auto 0;
+  background: var(--accent);
+  opacity: 0.6;
+}
+.theme-silk .field__input {
+  color: #f3ebdf;
+}
+.theme-silk .field__input::placeholder {
+  color: rgba(243, 235, 223, 0.7);
+}
+.theme-silk .stepper {
+  color: #f3ebdf;
+}
+.theme-silk .hero__frame {
+  padding: 8px;
+  background: #fbf6ee;
+}
+.theme-silk .greeting {
+  padding: 26px 22px;
+  background: #fbf6ee;
+  box-shadow: 0 10px 30px rgba(90, 60, 30, 0.12);
+}
+.theme-silk .place {
+  background: #fbf6ee;
+  border: 0;
+}
+
+/* =====================================================================
+   6. Золото Невы — dark blue city, gold and stars
+   ===================================================================== */
+.theme-nights {
+  --page-bg: #0d1522;
+  --backdrop:
+    radial-gradient(circle at 20% 10%, rgba(80, 100, 150, 0.35), transparent 45%),
+    radial-gradient(circle at 80% 90%, rgba(120, 70, 100, 0.25), transparent 45%);
+  --surface: #16233a;
+  --surface-alt: #1f3150;
+  --text: #f1e9d8;
+  --muted: rgba(241, 233, 216, 0.68);
+  --accent: #d8b46a;
+  --line: rgba(216, 180, 106, 0.35);
+  --btn-bg: #d8b46a;
+  --btn-text: #16233a;
+  --btn-radius: 0;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-border: rgba(216, 180, 106, 0.45);
+  --font-display: 'Old Standard TT', serif;
+  --font-body: 'Alice', serif;
+  --font-script: 'Bad Script', cursive;
+  --title-size: 2.3rem;
+  --title-transform: uppercase;
+  --title-spacing: 0.1em;
+  --hero-sky:
+    radial-gradient(circle at 74% 20%, #fff6dc 0 26px, rgba(255, 246, 220, 0.3) 28px, transparent 80px),
+    linear-gradient(180deg, #0f1a2e 0%, #23365a 45%, #6a5d80 75%, #c99a8a 100%);
+  --hero-text: #f6efe0;
+  --hero-skyline: #0a111d;
+  --edge-mask: var(--edge-wave);
+  --edge-h: 26px;
+  color-scheme: dark;
+}
+.theme-nights .hero__glow {
+  background: radial-gradient(circle at 50% 40%, rgba(216, 180, 106, 0.18), transparent 45%);
+}
+.theme-nights .hero--scene .hero__kicker {
+  font-size: clamp(2.2rem, 10vw, 3rem);
+  letter-spacing: 0.18em;
+}
+.theme-nights .hero--scene .hero__names {
+  color: #f0d595;
+}
+.theme-nights .hero__skyline .skyline__water {
+  color: #d8b46a;
+}
+.theme-nights .sec-title__main,
+.theme-nights .countdown__value,
+.theme-nights .timing__time,
+.theme-nights .place__time {
+  background: linear-gradient(180deg, #f6dfa5, #c79c4d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.theme-nights .sec-title__kicker {
+  font-size: 1.3rem;
+  color: var(--muted);
+}
+.theme-nights .place {
+  border-color: var(--line);
+}
+.theme-nights .dress__dot {
+  box-shadow:
+    0 0 0 1px rgba(216, 180, 106, 0.6),
+    0 6px 14px rgba(0, 0, 0, 0.3);
+}
+.theme-nights .finale__skyline {
+  color: #d8b46a;
+  opacity: 0.35;
+}
+
+/* =====================================================================
+   7. Пионы — blush watercolor, scalloped edges, handwriting
+   ===================================================================== */
+.theme-peony {
+  --page-bg: #f3dcd8;
+  --backdrop:
+    radial-gradient(circle at 12% 18%, rgba(239, 178, 180, 0.6), transparent 30%),
+    radial-gradient(circle at 88% 30%, rgba(185, 196, 167, 0.55), transparent 28%),
+    radial-gradient(circle at 70% 85%, rgba(236, 190, 178, 0.6), transparent 32%),
+    radial-gradient(circle at 20% 80%, rgba(255, 240, 230, 0.8), transparent 30%);
+  --surface: #fdf4f1;
+  --surface-alt: #f5dfda;
+  --text: #5a3c40;
+  --muted: #9a7a7c;
+  --accent: #c27a84;
+  --line: rgba(194, 122, 132, 0.35);
+  --btn-bg: #c27a84;
+  --btn-radius: 999px;
+  --input-bg: #fff;
+  --input-radius: 14px;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Caveat', cursive;
+  --title-size: 2.6rem;
+  --title-weight: 500;
+  --hero-sky:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), transparent 40%),
+    linear-gradient(160deg, #f8e3df 0%, #efc9c3 55%, #dfe3d2 100%);
+  --hero-skyline: rgba(150, 90, 100, 0.45);
+  --leaf: #93a385;
+  --flower: #f2bfc0;
+  --flower-inner: #f9d9d8;
+  --flower-line: #e5a4aa;
+  --flower-core: #f3d9a6;
+  --particle: #efb8bb;
+  --edge-mask: var(--edge-scallop);
+  --edge-size: 24px 100%;
+  --edge-repeat: repeat-x;
+  --edge-h: 14px;
+}
+.theme-peony .sec::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 178, 180, 0.35), transparent 65%);
+  pointer-events: none;
+}
+.theme-peony .sec:nth-of-type(even)::after {
+  left: -70px;
+  right: auto;
+  top: auto;
+  bottom: 10px;
+  background: radial-gradient(circle, rgba(185, 196, 167, 0.35), transparent 65%);
+}
+.theme-peony .sec:not(.hero) > * {
+  position: relative;
+  z-index: 1;
+}
+.theme-peony .sec-title__main {
+  font-style: italic;
+}
+.theme-peony .sec-title__kicker {
+  font-size: 1.6rem;
+}
+.theme-peony .hero--classic .hero__names {
+  font-style: italic;
+  text-transform: none;
+  font-size: clamp(3rem, 14vw, 4rem);
+  font-weight: 500;
+}
+.theme-peony .hero--classic .hero__amp {
+  font-size: 0.55em;
+}
+.theme-peony .hero__frame {
+  border-radius: 200px 200px 12px 12px;
+  padding: 10px;
+  transform: none;
+}
+.theme-peony .hero__frame-inner {
+  border-radius: 190px 190px 6px 6px;
+}
+.theme-peony .place {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.6);
+}
+.theme-peony .countdown__unit {
+  border: 0 !important;
+}
+.theme-peony .countdown__grid {
+  gap: 8px;
+}
+.theme-peony .countdown__value {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--accent);
+  font-size: 2rem;
+  box-shadow: 0 6px 16px rgba(194, 122, 132, 0.2);
+}
+
+/* =====================================================================
+   8. Конверт — kraft paper, letter, postcard and seal
+   ===================================================================== */
+.theme-envelope {
+  --page-bg: #c4a07a;
+  --backdrop:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.03) 0 3px, transparent 3px 7px),
+    radial-gradient(circle at 50% 30%, #d5b48f, #a9825b 80%);
+  --surface: #fbf6ec;
+  --surface-alt: #f2e8d6;
+  --text: #2b2523;
+  --muted: #7a6a5c;
+  --accent: #7a1f2b;
+  --line: rgba(43, 37, 35, 0.22);
+  --btn-bg: #7a1f2b;
+  --btn-radius: 2px;
+  --input-bg: #fffdf8;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Lora', serif;
+  --font-script: 'Marck Script', cursive;
+  --title-size: 2.5rem;
+  --title-weight: 500;
+  --seal: #7a1f2b;
+  --edge-mask: var(--edge-deckle);
+  --edge-size: 60px 100%;
+  --edge-repeat: repeat-x;
+  --edge-h: 10px;
+}
+.theme-envelope .invite {
+  margin: 28px auto 0;
+  box-shadow: 0 20px 60px rgba(60, 30, 10, 0.4);
+  background-image: repeating-linear-gradient(0deg, transparent 0 31px, rgba(122, 31, 43, 0.05) 31px 32px);
+}
+.theme-envelope .sec {
+  background-image: repeating-linear-gradient(0deg, transparent 0 31px, rgba(122, 31, 43, 0.04) 31px 32px);
+}
+.theme-envelope .sec-title__kicker {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+.theme-envelope .greeting__title {
+  font-family: var(--font-script);
+  font-size: 2rem;
+}
+.theme-envelope .greeting__text {
+  font-style: italic;
+}
+.theme-envelope .place {
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  outline: 1px solid var(--line);
+  outline-offset: -6px;
+}
+.theme-envelope .dress__dot {
+  border-radius: 4px;
+  box-shadow:
+    0 0 0 4px #fffdf8,
+    0 0 0 5px var(--line);
+}

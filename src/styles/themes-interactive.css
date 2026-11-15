@@ -1,0 +1,1065 @@
+/* ===================== Разводной мост ===================== */
+.theme-bridge {
+  --page-bg: #c5d0d9;
+  --backdrop:
+    radial-gradient(circle at 80% 10%, rgba(242, 166, 90, 0.25), transparent 40%),
+    linear-gradient(180deg, #d4dde4, #aebdca);
+  --intro-bg:
+    radial-gradient(ellipse at 50% 100%, rgba(217, 138, 85, 0.35), transparent 55%),
+    linear-gradient(180deg, #0f2233 0%, #23425e 45%, #0e1d2b 100%);
+  --intro-text: #fff3dc;
+  --surface: #eef2f5;
+  --surface-alt: #1e3a52;
+  --text: #1e3a52;
+  --muted: #5f7389;
+  --accent: #d9853b;
+  --line: rgba(30, 58, 82, 0.2);
+  --alt-text: #eef2f5;
+  --alt-muted: rgba(238, 242, 245, 0.7);
+  --alt-accent: #f2a65a;
+  --alt-line: rgba(242, 166, 90, 0.35);
+  --alt-btn-bg: #f2a65a;
+  --alt-btn-text: #1e3a52;
+  --btn-bg: #1e3a52;
+  --btn-radius: 4px;
+  --input-bg: #fff;
+  --input-radius: 4px;
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Caveat', cursive;
+  --title-size: 2.3rem;
+  --title-weight: 300;
+  --title-transform: uppercase;
+  --title-spacing: 0.1em;
+  --hero-sky:
+    radial-gradient(circle at 78% 18%, #fff3cf 0 20px, rgba(255, 243, 207, 0.25) 22px, transparent 70px),
+    linear-gradient(180deg, #0f2233 0%, #2c4f6e 55%, #d98a55 100%);
+  --hero-text: #fff3dc;
+  --hero-skyline: #0a1520;
+  --edge-mask: var(--edge-wave);
+  --edge-h: 26px;
+}
+.theme-bridge .hero--scene .hero__kicker {
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+.theme-bridge .hero--scene .hero__names {
+  color: #ffd9a0;
+}
+.theme-bridge .countdown__value,
+.theme-bridge .timing__time,
+.theme-bridge .place__time {
+  font-weight: 300;
+}
+.theme-bridge .place {
+  border-left: 3px solid var(--accent);
+  background: #fff;
+}
+
+/* ===================== Сердце ===================== */
+.theme-heart {
+  --page-bg: #e9c6c6;
+  --backdrop:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.5), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(142, 31, 53, 0.25), transparent 45%);
+  --intro-bg: radial-gradient(circle at 50% 40%, #b43a52, #5e1022);
+  --intro-text: #fff;
+  --surface: #fbf3ee;
+  --surface-alt: #8e1f35;
+  --text: #4a1a24;
+  --muted: #8d6168;
+  --accent: #8e1f35;
+  --line: rgba(142, 31, 53, 0.22);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.8);
+  --alt-accent: #f3d6cf;
+  --alt-line: rgba(255, 255, 255, 0.35);
+  --alt-btn-bg: #fff;
+  --alt-btn-text: #8e1f35;
+  --btn-bg: #8e1f35;
+  --input-bg: #fff;
+  --input-radius: 12px;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Bad Script', cursive;
+  --title-size: 2.3rem;
+  --hero-sky:
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.18), transparent 50%),
+    linear-gradient(180deg, #b43a52, #7a1a2e);
+  --hero-text: #fff;
+  --hero-skyline: rgba(40, 5, 12, 0.6);
+  --leaf: #6f7d58;
+  --flower: #fff;
+  --flower-inner: #f6d3d3;
+  --flower-line: #e8a7a7;
+  --flower-core: #c9a45c;
+  --particle: #c2384f;
+  --edge-mask: var(--edge-wave);
+  --edge-h: 28px;
+}
+.theme-heart .sec-title__main {
+  font-style: italic;
+}
+.theme-heart .hero--scene .hero__kicker {
+  font-style: italic;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.theme-heart .place {
+  border-radius: 20px;
+  background: #fff;
+}
+
+
+/* ===================== Конверт с лентой ===================== */
+.theme-ribbon {
+  --page-bg: #e7e1d4;
+  --backdrop:
+    repeating-linear-gradient(0deg, rgba(120, 100, 70, 0.04) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, rgba(120, 100, 70, 0.04) 0 1px, transparent 1px 4px);
+  --intro-bg:
+    repeating-linear-gradient(0deg, rgba(120, 100, 70, 0.05) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, rgba(120, 100, 70, 0.05) 0 1px, transparent 1px 4px),
+    radial-gradient(circle at 50% 40%, #f1ebdf, #d9cfbd);
+  --intro-text: #5d6b55;
+  --surface: #fbfaf6;
+  --surface-alt: #8d9c84;
+  --text: #3f463a;
+  --muted: #747a6c;
+  --accent: #7d9172;
+  --line: rgba(125, 145, 114, 0.3);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.82);
+  --alt-accent: #f3eedf;
+  --alt-line: rgba(255, 255, 255, 0.4);
+  --alt-btn-bg: #fbfaf6;
+  --alt-btn-text: #5d6b55;
+  --btn-bg: #7d9172;
+  --input-bg: #fff;
+  --input-radius: 6px;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Marck Script', cursive;
+  --leaf: #7d9172;
+  --flower: #fffdf7;
+  --flower-inner: #f3ecdf;
+  --flower-line: rgba(120, 100, 70, 0.2);
+  --flower-core: #d4bd86;
+  --particle: #a3b498;
+  --seal: #7d9172;
+  --edge-mask: var(--edge-torn);
+}
+.theme-ribbon .hero--classic {
+  background:
+    linear-gradient(90deg, transparent calc(50% - 7px), rgba(141, 156, 132, 0.18) calc(50% - 7px) calc(50% + 7px), transparent 0);
+}
+.theme-ribbon .place {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* ===================== Конверт-лепестки ===================== */
+.theme-petals {
+  --page-bg: #dfe6ee;
+  --backdrop:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.6), transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(111, 143, 176, 0.25), transparent 45%);
+  --intro-bg: radial-gradient(circle at 50% 40%, #eef3f8, #c3d1e0);
+  --intro-text: #3d5370;
+  --surface: #fbfcfe;
+  --surface-alt: #6f8fb0;
+  --text: #2f4560;
+  --muted: #6c7f95;
+  --accent: #5d7ea2;
+  --line: rgba(93, 126, 162, 0.25);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.82);
+  --alt-accent: #e3ebf4;
+  --alt-line: rgba(255, 255, 255, 0.4);
+  --alt-btn-bg: #fff;
+  --alt-btn-text: #3d5370;
+  --btn-bg: #5d7ea2;
+  --input-bg: #fff;
+  --input-radius: 10px;
+  --font-display: 'Prata', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Bad Script', cursive;
+  --title-size: 2.2rem;
+  --hero-sky:
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.45), transparent 55%),
+    linear-gradient(180deg, #9fb6cf 0%, #c9d6e4 60%, #eef3f8 100%);
+  --hero-text: #2f4560;
+  --hero-skyline: rgba(61, 83, 112, 0.55);
+  --particle: #b8c9dc;
+  --flower: #fff;
+  --flower-inner: #dbe4ee;
+  --flower-line: rgba(93, 126, 162, 0.3);
+  --flower-core: #c9a45c;
+  --leaf: #8aa0b4;
+  --seal: #5d7ea2;
+  --edge-mask: var(--edge-scallop);
+  --edge-h: 18px;
+  --edge-size: 36px 100%;
+  --edge-repeat: repeat-x;
+}
+.theme-petals .place {
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(61, 83, 112, 0.1);
+}
+
+/* ===================== Пастельный мост ===================== */
+.theme-dawn {
+  --page-bg: #efd9d6;
+  --backdrop:
+    radial-gradient(circle at 80% 10%, rgba(255, 214, 160, 0.5), transparent 40%),
+    linear-gradient(180deg, #e6dcef, #f6d6c6);
+  --intro-bg: linear-gradient(180deg, #a596c4 0%, #e3b3c0 45%, #f7d0b4 100%);
+  --intro-text: #4b3f5c;
+  --surface: #fdf6f2;
+  --surface-alt: #8e7aa8;
+  --text: #4b3f5c;
+  --muted: #85798f;
+  --accent: #d9805f;
+  --line: rgba(142, 122, 168, 0.28);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.82);
+  --alt-accent: #ffd9c4;
+  --alt-line: rgba(255, 255, 255, 0.4);
+  --alt-btn-bg: #ffd9c4;
+  --alt-btn-text: #4b3f5c;
+  --btn-bg: #d9805f;
+  --input-bg: #fff;
+  --input-radius: 10px;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Caveat', cursive;
+  --hero-sky:
+    radial-gradient(circle at 50% 62%, #fff7df 0 26px, rgba(255, 214, 160, 0.55) 30px, transparent 90px),
+    linear-gradient(180deg, #a596c4 0%, #e3b3c0 45%, #fbd2b4 75%, #fde6cc 100%);
+  --hero-text: #4b3f5c;
+  --hero-skyline: #6d5b80;
+  --edge-mask: var(--edge-wave);
+  --edge-h: 26px;
+}
+.theme-dawn .sec-title__main,
+.theme-dawn .hero--scene .hero__names {
+  font-style: italic;
+}
+.theme-dawn .hero--scene .hero__names {
+  color: #c4664a;
+}
+.theme-dawn .place {
+  border-radius: 16px;
+  background: #fff;
+}
+
+/* ===================== Алые паруса ===================== */
+.theme-sails {
+  --page-bg: #1a2335;
+  --backdrop:
+    radial-gradient(circle at 20% 10%, rgba(179, 32, 42, 0.35), transparent 45%),
+    radial-gradient(circle at 90% 90%, rgba(201, 164, 92, 0.18), transparent 40%);
+  --intro-bg:
+    radial-gradient(ellipse at 50% 72%, rgba(255, 120, 70, 0.55), transparent 50%),
+    linear-gradient(180deg, #1c0f28 0%, #5a1a35 42%, #c2483a 66%, #1a1328 78%, #0d1426 100%);
+  --intro-text: #ffe9d0;
+  --surface: #f7f1e8;
+  --surface-alt: #13243d;
+  --text: #2a1a1f;
+  --muted: #6f5f60;
+  --accent: #b3202a;
+  --line: rgba(179, 32, 42, 0.25);
+  --alt-text: #f7f1e8;
+  --alt-muted: rgba(247, 241, 232, 0.75);
+  --alt-accent: #e2c27e;
+  --alt-line: rgba(226, 194, 126, 0.35);
+  --alt-btn-bg: #b3202a;
+  --alt-btn-text: #fff;
+  --btn-bg: #b3202a;
+  --btn-radius: 4px;
+  --input-bg: #fff;
+  --input-radius: 4px;
+  --font-display: 'Forum', serif;
+  --font-body: 'Lora', serif;
+  --font-script: 'Marck Script', cursive;
+  --title-size: 2.4rem;
+  --title-transform: uppercase;
+  --title-spacing: 0.08em;
+  --hero-sky:
+    radial-gradient(ellipse at 50% 85%, rgba(255, 120, 70, 0.6), transparent 55%),
+    linear-gradient(180deg, #1c0f28 0%, #5a1a35 45%, #c2483a 85%, #e8794a 100%);
+  --hero-text: #ffe9d0;
+  --hero-skyline: #12090f;
+  --seal: #b3202a;
+  --edge-mask: var(--edge-wave);
+  --edge-h: 26px;
+}
+.theme-sails .hero--scene .hero__names {
+  color: #ffd9a0;
+}
+.theme-sails .place {
+  border-top: 3px solid var(--accent);
+  background: #fff;
+}
+
+/* ===================== Половинки сердца ===================== */
+.theme-halves {
+  --page-bg: #fbe3dc;
+  --backdrop:
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.6), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(232, 101, 107, 0.25), transparent 45%);
+  --intro-bg: radial-gradient(circle at 50% 40%, #f58f86, #c9404f);
+  --intro-text: #fff;
+  --surface: #fff7f4;
+  --surface-alt: #e8656b;
+  --text: #3b2a2c;
+  --muted: #8a6f70;
+  --accent: #e2475a;
+  --line: rgba(232, 101, 107, 0.28);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.85);
+  --alt-accent: #ffe0d6;
+  --alt-line: rgba(255, 255, 255, 0.45);
+  --alt-btn-bg: #fff;
+  --alt-btn-text: #e2475a;
+  --btn-bg: #e2475a;
+  --btn-radius: 14px;
+  --input-bg: #fff;
+  --input-radius: 14px;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Caveat', cursive;
+  --title-size: 2.3rem;
+  --hero-skyline: rgba(255, 255, 255, 0.3);
+  --particle: #f4a3a0;
+  --edge-mask: var(--edge-curve);
+  --edge-h: 30px;
+}
+.theme-halves .hero__arch {
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.25), transparent 55%),
+    linear-gradient(180deg, #f58f86, #c9404f 85%);
+}
+.theme-halves .place {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(232, 101, 107, 0.14);
+}
+
+/* ===================== Замок любви ===================== */
+.theme-lock {
+  --page-bg: #cfd3d6;
+  --backdrop:
+    radial-gradient(circle at 80% 10%, rgba(185, 139, 62, 0.2), transparent 40%),
+    linear-gradient(180deg, #d9dcdf, #b8bfc5);
+  --intro-bg:
+    radial-gradient(ellipse at 50% 100%, rgba(185, 139, 62, 0.3), transparent 50%),
+    linear-gradient(180deg, #252e37 0%, #46525e 55%, #2b4554 72%, #182632 100%);
+  --intro-text: #f2efe9;
+  --surface: #f2efe9;
+  --surface-alt: #3b4650;
+  --text: #2c3339;
+  --muted: #6b737a;
+  --accent: #a87a2f;
+  --line: rgba(59, 70, 80, 0.22);
+  --alt-text: #f2efe9;
+  --alt-muted: rgba(242, 239, 233, 0.75);
+  --alt-accent: #e0bf7c;
+  --alt-line: rgba(224, 191, 124, 0.35);
+  --alt-btn-bg: #c9973f;
+  --alt-btn-text: #2c3339;
+  --btn-bg: #3b4650;
+  --btn-radius: 4px;
+  --input-bg: #fff;
+  --input-radius: 4px;
+  --font-display: 'Cormorant SC', serif;
+  --font-body: 'Lora', serif;
+  --font-script: 'Bad Script', cursive;
+  --title-size: 2.3rem;
+  --hero-sky:
+    radial-gradient(circle at 18% 62%, rgba(241, 213, 142, 0.7) 0 16px, transparent 64px),
+    linear-gradient(180deg, #46525e 0%, #7d8a96 60%, #c3b28f 100%);
+  --hero-text: #fff;
+  --hero-skyline: #1f262c;
+  --seal: #a87a2f;
+  --edge-mask: var(--edge-torn);
+}
+.theme-lock .place {
+  border-left: 3px solid var(--accent);
+  background: #fff;
+}
+
+/* ===================== Навстречу друг другу ===================== */
+.theme-meet {
+  --page-bg: #d6e6e0;
+  --backdrop:
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.6), transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(95, 143, 134, 0.25), transparent 45%);
+  --intro-bg: linear-gradient(180deg, #e3efea 0%, #cfe3dc 100%);
+  --intro-text: #2f4a4f;
+  --surface: #f4f8f6;
+  --surface-alt: #5f8f86;
+  --text: #2a3b3f;
+  --muted: #687d7f;
+  --accent: #d0705f;
+  --line: rgba(47, 74, 79, 0.2);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.82);
+  --alt-accent: #ffe0d2;
+  --alt-line: rgba(255, 255, 255, 0.4);
+  --alt-btn-bg: #fff;
+  --alt-btn-text: #2f4a4f;
+  --btn-bg: #2f4a4f;
+  --btn-radius: 12px;
+  --input-bg: #fff;
+  --input-radius: 12px;
+  --font-display: 'Lora', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Caveat', cursive;
+  --title-size: 2.2rem;
+  --hero-sky:
+    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.6), transparent 45%),
+    linear-gradient(180deg, #bcd9cf 0%, #e3efea 70%, #f6eee6 100%);
+  --hero-text: #2f4a4f;
+  --hero-skyline: #2f4a4f;
+  --particle: #e7a3a0;
+  --edge-mask: var(--edge-curve);
+  --edge-h: 28px;
+}
+.theme-meet .hero--scene .hero__kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.theme-meet .hero--scene .hero__names {
+  color: #d0705f;
+  font-size: 2.45rem;
+}
+.theme-meet .meet__names {
+  font-size: 2.1rem;
+}
+.theme-meet .place {
+  border-radius: 16px;
+  background: #fff;
+}
+
+/* ===================== Золотой контур ===================== */
+.theme-lineart {
+  --page-bg: #0d2f2b;
+  --backdrop:
+    radial-gradient(circle at 50% 0, rgba(217, 181, 106, 0.18), transparent 50%),
+    linear-gradient(180deg, #123f3a, #0b2925);
+  --intro-bg:
+    radial-gradient(circle at 50% 40%, #1a524b, #0b2925 75%);
+  --intro-text: #e9c77f;
+  --surface: #f5f1e6;
+  --surface-alt: #123f3a;
+  --text: #1d3330;
+  --muted: #5d6d68;
+  --accent: #a8823a;
+  --line: rgba(168, 130, 58, 0.35);
+  --alt-text: #f5f1e6;
+  --alt-muted: rgba(245, 241, 230, 0.75);
+  --alt-accent: #e9c77f;
+  --alt-line: rgba(233, 199, 127, 0.4);
+  --alt-btn-bg: #d9b56a;
+  --alt-btn-text: #123f3a;
+  --btn-bg: #123f3a;
+  --btn-radius: 2px;
+  --input-bg: #fff;
+  --input-radius: 2px;
+  --font-display: 'Cormorant SC', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Cormorant Garamond', serif;
+  --title-size: 2.4rem;
+  --title-spacing: 0.06em;
+  --hero-sky: radial-gradient(circle at 50% 30%, #1a524b, #0b2925 80%);
+  --hero-skyline: #d9b56a;
+  --particle: #d9b56a;
+  --edge-mask: var(--edge-none);
+}
+.theme-lineart .sec-title__kicker,
+.theme-lineart .hero--classic .hero__kicker,
+.theme-lineart .hero--classic .hero__amp {
+  font-style: italic;
+}
+.theme-lineart .hero__frame {
+  outline: 1px solid var(--accent);
+  outline-offset: 6px;
+}
+.theme-lineart .hero--classic .skyline__city {
+  fill: none;
+  stroke: #d9b56a;
+  stroke-width: 0.7;
+}
+.theme-lineart .sec {
+  border-top: 1px solid var(--line);
+}
+.theme-lineart .place {
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+/* ===================== Бумажный мост ===================== */
+.theme-papercut {
+  --page-bg: #bfe0dc;
+  --backdrop:
+    radial-gradient(circle at 80% 15%, rgba(233, 180, 76, 0.3), transparent 35%),
+    linear-gradient(180deg, #cfe8e4, #a9d3cf);
+  --intro-bg: linear-gradient(180deg, #e6f3f1, #bfe0dc);
+  --intro-text: #1f5a60;
+  --surface: #f6efe3;
+  --surface-alt: #2f7f86;
+  --text: #1f3f43;
+  --muted: #5e7577;
+  --accent: #e0705a;
+  --line: rgba(47, 127, 134, 0.25);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.85);
+  --alt-accent: #ffd38a;
+  --alt-line: rgba(255, 255, 255, 0.4);
+  --alt-btn-bg: #ef8a74;
+  --alt-btn-text: #fff;
+  --btn-bg: #ef8a74;
+  --btn-radius: 10px;
+  --input-bg: #fff;
+  --input-radius: 10px;
+  --font-display: 'Amatic SC', cursive;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Caveat', cursive;
+  --title-size: 3rem;
+  --title-weight: 700;
+  --hero-sky: linear-gradient(180deg, #8cc5c0, #cfe8e4 75%);
+  --hero-text: #1f5a60;
+  --hero-skyline: #2f7f86;
+  --flower: #fff;
+  --flower-inner: #ffd9cf;
+  --flower-line: rgba(224, 112, 90, 0.4);
+  --flower-core: #e9b44c;
+  --leaf: #2f7f86;
+  --edge-mask: var(--edge-wave);
+  --edge-h: 26px;
+}
+.theme-papercut .sec--edge::before {
+  filter: drop-shadow(0 -4px 3px rgba(20, 60, 64, 0.25));
+}
+.theme-papercut .hero--scene .hero__names {
+  color: #e0705a;
+}
+.theme-papercut .place {
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 0 rgba(47, 127, 134, 0.2);
+}
+
+/* ===================== Чертёж моста ===================== */
+.theme-blueprint {
+  --page-bg: #1d4f91;
+  --backdrop:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px) 0 0 / 24px 24px,
+    #1d4f91;
+  --intro-bg:
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 5px 5px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 5px 5px,
+    radial-gradient(circle at 50% 40%, #2a62a8, #183f75);
+  --intro-text: #fff;
+  --surface: #f4f6f9;
+  --surface-alt: #1d4f91;
+  --text: #1f2a3a;
+  --muted: #5d6879;
+  --accent: #1d4f91;
+  --line: rgba(29, 79, 145, 0.25);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.8);
+  --alt-accent: #c9d6e8;
+  --alt-line: rgba(255, 255, 255, 0.35);
+  --alt-btn-bg: #fff;
+  --alt-btn-text: #1d4f91;
+  --btn-bg: #1d4f91;
+  --btn-radius: 2px;
+  --input-bg: #fff;
+  --input-radius: 2px;
+  --font-display: 'PT Mono', monospace;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Caveat', cursive;
+  --title-size: 1.8rem;
+  --title-transform: uppercase;
+  --title-spacing: 0.08em;
+  --seal: #e2483d;
+  --hero-sky: linear-gradient(180deg, #2a62a8, #6f94c4);
+  --hero-skyline: #fff;
+  --edge-mask: var(--edge-none);
+}
+.theme-blueprint .sec--alt {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0 / 20px 20px,
+    #1d4f91;
+}
+.theme-blueprint .postcard {
+  background:
+    linear-gradient(rgba(29, 79, 145, 0.08) 1px, transparent 1px) 0 0 / 16px 16px,
+    linear-gradient(90deg, rgba(29, 79, 145, 0.08) 1px, transparent 1px) 0 0 / 16px 16px,
+    #fff;
+}
+.theme-blueprint .postcard__postmark {
+  color: #e2483d;
+}
+.theme-blueprint .hero__names {
+  font-family: 'Caveat', cursive;
+  text-transform: none;
+}
+.theme-blueprint .place {
+  border: 1px dashed var(--accent);
+  background: #fff;
+}
+
+/* ===================== Мост в цветах ===================== */
+.theme-garland {
+  --page-bg: #f3dfd8;
+  --backdrop:
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.6), transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(138, 162, 122, 0.25), transparent 45%);
+  --intro-bg: radial-gradient(circle at 50% 40%, #fdf2ec, #f0d5cb);
+  --intro-text: #7c4b5a;
+  --surface: #fffaf6;
+  --surface-alt: #c98b8b;
+  --text: #4a3036;
+  --muted: #86696e;
+  --accent: #b46f74;
+  --line: rgba(180, 111, 116, 0.25);
+  --alt-text: #fff;
+  --alt-muted: rgba(255, 255, 255, 0.85);
+  --alt-accent: #fbe6dc;
+  --alt-line: rgba(255, 255, 255, 0.45);
+  --alt-btn-bg: #fff;
+  --alt-btn-text: #7c4b5a;
+  --btn-bg: #7c4b5a;
+  --btn-radius: 999px;
+  --input-bg: #fff;
+  --input-radius: 12px;
+  --font-display: 'Alice', serif;
+  --font-body: 'Raleway', sans-serif;
+  --font-script: 'Marck Script', cursive;
+  --title-size: 2.3rem;
+  --hero-skyline: rgba(255, 255, 255, 0.35);
+  --leaf: #8aa27a;
+  --flower: #fff;
+  --flower-inner: #f3cfc6;
+  --flower-line: rgba(180, 111, 116, 0.3);
+  --flower-core: #e9b44c;
+  --particle: #f3cfc6;
+  --edge-mask: var(--edge-scallop);
+  --edge-h: 18px;
+  --edge-size: 36px 100%;
+  --edge-repeat: repeat-x;
+}
+.theme-garland .hero__arch {
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.3), transparent 55%),
+    linear-gradient(180deg, #d9a3a0, #7c4b5a 90%);
+}
+.theme-garland .place {
+  border-radius: 18px;
+  background: #fff;
+}
+.theme-garland .hero--arch .hero__skyline {
+  color: #4e2c37;
+}
+.theme-halves .hero--arch .hero__skyline {
+  color: #7a1f2e;
+}
+
+/* ===================== Терминал ===================== */
+.theme-terminal {
+  --page-bg: #0d0a04;
+  --backdrop:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at 50% 30%, #2a1d05, #0d0a04 70%);
+  --intro-bg:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at 50% 40%, #2a2316, #0d0a04 75%);
+  --intro-text: #ffb000;
+  --surface: #161005;
+  --surface-alt: #221808;
+  --text: #ffc94d;
+  --muted: #c99a3c;
+  --accent: #ffb000;
+  --line: rgba(255, 176, 0, 0.3);
+  --card-bg: rgba(255, 176, 0, 0.04);
+  --alt-text: #ffc94d;
+  --alt-muted: #c99a3c;
+  --alt-accent: #ffd27a;
+  --alt-line: rgba(255, 176, 0, 0.3);
+  --btn-bg: #ffb000;
+  --btn-text: #161005;
+  --btn-radius: 0;
+  --alt-btn-bg: #ffb000;
+  --alt-btn-text: #161005;
+  --input-bg: #0d0a04;
+  --input-border: rgba(255, 176, 0, 0.5);
+  --input-radius: 0;
+  --font-display: 'JetBrains Mono', monospace;
+  --font-body: 'JetBrains Mono', monospace;
+  --font-script: 'JetBrains Mono', monospace;
+  --code-font: 'JetBrains Mono', monospace;
+  --code-bg: #0d0a04;
+  --code-bar: #221808;
+  --code-border: rgba(255, 176, 0, 0.3);
+  --code-text: #ffc94d;
+  --code-muted: rgba(255, 176, 0, 0.45);
+  --syn-k: #ffd27a;
+  --syn-p: #ffb000;
+  --syn-s: #ffe3a3;
+  --syn-c: #a77a26;
+  --title-size: 1.6rem;
+  --title-weight: 700;
+  --title-transform: uppercase;
+  --title-spacing: 0.04em;
+  --seal: #c77d00;
+  --edge-mask: var(--edge-none);
+  font-size: 14px;
+}
+.theme-terminal .invite {
+  text-shadow: 0 0 6px rgba(255, 176, 0, 0.35);
+}
+.theme-terminal .sec-title__kicker {
+  font-size: 0.85rem;
+}
+.theme-terminal .sec-title__kicker::before {
+  content: '# ';
+}
+.theme-terminal .sec-title__main::before {
+  content: '> ';
+}
+.theme-terminal .sec-title__main::after {
+  content: '_';
+  animation: blink 1s steps(1) infinite;
+}
+.theme-terminal .sec {
+  border-top: 1px dashed var(--line);
+}
+.theme-terminal .place,
+.theme-terminal .countdown__item {
+  border: 1px solid var(--line);
+  background: rgba(255, 176, 0, 0.04);
+}
+.theme-terminal .code-card__bar i {
+  background: #ffb000;
+  opacity: 0.6;
+}
+
+/* ===================== Редактор кода ===================== */
+.theme-ide {
+  --page-bg: #11111b;
+  --backdrop:
+    radial-gradient(circle at 15% 10%, rgba(203, 166, 247, 0.18), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(137, 180, 250, 0.15), transparent 45%);
+  --intro-bg: radial-gradient(circle at 50% 35%, #313244, #11111b 75%);
+  --intro-text: #cdd6f4;
+  --surface: #1e1e2e;
+  --surface-alt: #181825;
+  --text: #cdd6f4;
+  --muted: #9399b2;
+  --accent: #f5c2e7;
+  --line: rgba(205, 214, 244, 0.14);
+  --alt-text: #cdd6f4;
+  --alt-muted: #9399b2;
+  --alt-accent: #89b4fa;
+  --alt-line: rgba(137, 180, 250, 0.25);
+  --btn-bg: #cba6f7;
+  --btn-text: #11111b;
+  --btn-radius: 8px;
+  --alt-btn-bg: #89b4fa;
+  --alt-btn-text: #11111b;
+  --input-bg: #181825;
+  --input-border: #45475a;
+  --input-radius: 8px;
+  --font-display: 'JetBrains Mono', monospace;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Caveat', cursive;
+  --code-font: 'JetBrains Mono', monospace;
+  --code-bg: #181825;
+  --code-bar: #11111b;
+  --code-border: #313244;
+  --code-text: #cdd6f4;
+  --code-muted: #6c7086;
+  --title-size: 1.75rem;
+  --title-weight: 500;
+  --seal: #cba6f7;
+  --edge-mask: var(--edge-none);
+}
+.theme-ide .sec-title__kicker {
+  font: italic 400 0.85rem/1.4 'JetBrains Mono', monospace;
+  color: #7f849c;
+}
+.theme-ide .sec-title__kicker::before {
+  content: '// ';
+}
+.theme-ide .sec-title__main::after {
+  content: '()';
+  color: #f9e2af;
+}
+.theme-ide .sec {
+  border-top: 1px solid var(--line);
+}
+.theme-ide .place {
+  border: 1px solid #313244;
+  border-radius: 10px;
+  background: #181825;
+}
+.theme-ide .hero--code .hero__names span:not(.hero__amp) {
+  background: linear-gradient(90deg, #89b4fa, #f5c2e7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===================== Pull request ===================== */
+.theme-git {
+  --page-bg: #f6f8fa;
+  --backdrop:
+    radial-gradient(circle at 10% 10%, rgba(130, 80, 223, 0.08), transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(31, 136, 61, 0.08), transparent 40%);
+  --intro-bg: linear-gradient(180deg, #f6f8fa, #eaeef2);
+  --intro-text: #1f2328;
+  --surface: #ffffff;
+  --surface-alt: #24292f;
+  --text: #1f2328;
+  --muted: #656d76;
+  --accent: #8250df;
+  --line: #d0d7de;
+  --alt-text: #f0f6fc;
+  --alt-muted: #9198a1;
+  --alt-accent: #d2a8ff;
+  --alt-line: rgba(240, 246, 252, 0.15);
+  --btn-bg: #1f883d;
+  --btn-text: #fff;
+  --btn-radius: 6px;
+  --alt-btn-bg: #1f883d;
+  --alt-btn-text: #fff;
+  --input-bg: #f6f8fa;
+  --input-border: #d0d7de;
+  --input-radius: 6px;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Caveat', cursive;
+  --code-font: 'JetBrains Mono', monospace;
+  --code-bg: #f6f8fa;
+  --code-bar: #fff;
+  --code-border: #d0d7de;
+  --code-text: #1f2328;
+  --code-muted: #8c959f;
+  --syn-k: #cf222e;
+  --syn-p: #0550ae;
+  --syn-s: #0a3069;
+  --syn-c: #6e7781;
+  --title-size: 1.8rem;
+  --title-weight: 600;
+  --seal: #8250df;
+  --edge-mask: var(--edge-none);
+}
+.theme-git .sec-title__kicker {
+  font: 600 0.8rem/1.4 'JetBrains Mono', monospace;
+  color: #8250df;
+}
+.theme-git .sec-title__kicker::before {
+  content: '## ';
+  color: #8c959f;
+}
+.theme-git .sec {
+  border-top: 1px solid var(--line);
+}
+.theme-git .code-card {
+  box-shadow: 0 8px 24px rgba(31, 35, 40, 0.1);
+}
+.theme-git .place {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+.theme-git .hero--code .hero__amp {
+  color: #8250df;
+}
+
+/* ===================== 8-бит ===================== */
+.theme-pixel {
+  --page-bg: #2b1b4d;
+  --backdrop:
+    radial-gradient(#ffffff 1px, transparent 1.5px) 0 0 / 40px 40px,
+    linear-gradient(180deg, #2b1b4d, #4a2c7a);
+  --intro-bg:
+    radial-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1.5px) 0 0 / 32px 32px,
+    linear-gradient(180deg, #1b1033, #2b1b4d);
+  --intro-text: #fff;
+  --surface: #fff6e9;
+  --surface-alt: #6a4c93;
+  --text: #2b1b4d;
+  --muted: #6a5a80;
+  --accent: #ff5c8a;
+  --line: #2b1b4d;
+  --alt-text: #fff;
+  --alt-muted: #e5d8ff;
+  --alt-accent: #ffd23f;
+  --alt-line: #ffd23f;
+  --btn-bg: #ff5c8a;
+  --btn-text: #fff;
+  --btn-radius: 0;
+  --alt-btn-bg: #ffd23f;
+  --alt-btn-text: #2b1b4d;
+  --input-bg: #fff;
+  --input-border: #2b1b4d;
+  --input-radius: 0;
+  --font-display: 'Press Start 2P', monospace;
+  --font-body: 'JetBrains Mono', monospace;
+  --font-script: 'Press Start 2P', monospace;
+  --title-size: 1.15rem;
+  --title-spacing: 0;
+  --hero-sky:
+    radial-gradient(#ffffff 1px, transparent 1.5px) 0 0 / 28px 28px,
+    linear-gradient(180deg, #2b1b4d 0%, #6a4c93 70%, #ff5c8a 100%);
+  --hero-text: #fff;
+  --hero-skyline: #1b1033;
+  --particle: #ff5c8a;
+  --seal: #ff5c8a;
+  --edge-mask: var(--edge-pixel);
+  --edge-h: 12px;
+  --edge-size: 32px 100%;
+  --edge-repeat: repeat-x;
+  font-size: 14px;
+}
+.theme-pixel .sec-title__kicker {
+  font-size: 0.6rem;
+  line-height: 2;
+  color: #ff5c8a;
+}
+.theme-pixel .sec-title__main {
+  line-height: 1.6;
+  text-shadow: 3px 3px 0 rgba(255, 92, 138, 0.45);
+}
+.theme-pixel .hero--scene .hero__kicker {
+  font-size: 0.6rem;
+}
+.theme-pixel .hero--scene .hero__names {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #ffd23f;
+  text-shadow: 4px 4px 0 #ff5c8a;
+}
+.theme-pixel .hero--scene .hero__date {
+  font-size: 0.9rem;
+}
+.theme-pixel .hero--scene .hero__city {
+  font-size: 0.55rem;
+}
+.theme-pixel .countdown__value {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  height: 1.6em;
+}
+.theme-pixel .place,
+.theme-pixel .btn {
+  border: 3px solid #2b1b4d;
+  box-shadow: 4px 4px 0 #2b1b4d;
+}
+.theme-pixel .btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+}
+.theme-pixel .place {
+  background: #fff;
+}
+.theme-pixel .timing__time,
+.theme-pixel .place__time {
+  font-size: 0.95rem;
+}
+
+/* ===================== Матрица ===================== */
+.theme-matrix {
+  --page-bg: #020a04;
+  --backdrop:
+    repeating-linear-gradient(90deg, rgba(0, 255, 106, 0.04) 0 1px, transparent 1px 18px),
+    radial-gradient(ellipse at 50% 0, rgba(0, 255, 106, 0.12), transparent 60%);
+  --intro-bg: #020a04;
+  --intro-text: #00ff6a;
+  --surface: #050f07;
+  --surface-alt: #0a1d0f;
+  --text: #b9f6ca;
+  --muted: #5fbf82;
+  --accent: #00ff6a;
+  --line: rgba(0, 255, 106, 0.25);
+  --alt-text: #b9f6ca;
+  --alt-muted: #5fbf82;
+  --alt-accent: #00ff6a;
+  --alt-line: rgba(0, 255, 106, 0.3);
+  --btn-bg: #00c853;
+  --btn-text: #020a04;
+  --btn-radius: 0;
+  --alt-btn-bg: #00ff6a;
+  --alt-btn-text: #020a04;
+  --input-bg: #020a04;
+  --input-border: rgba(0, 255, 106, 0.45);
+  --input-radius: 0;
+  --font-display: 'JetBrains Mono', monospace;
+  --font-body: 'JetBrains Mono', monospace;
+  --font-script: 'JetBrains Mono', monospace;
+  --code-font: 'JetBrains Mono', monospace;
+  --code-bg: #020a04;
+  --code-bar: #0a1d0f;
+  --code-border: rgba(0, 255, 106, 0.3);
+  --code-text: #b9f6ca;
+  --code-muted: rgba(0, 255, 106, 0.4);
+  --syn-k: #00ff6a;
+  --syn-p: #7dffb0;
+  --syn-s: #d6ffe4;
+  --syn-c: #3f8f5c;
+  --title-size: 1.6rem;
+  --title-weight: 700;
+  --title-transform: uppercase;
+  --title-spacing: 0.1em;
+  --seal: #00c853;
+  --edge-mask: var(--edge-none);
+  font-size: 14px;
+}
+.theme-matrix .invite {
+  text-shadow: 0 0 6px rgba(0, 255, 106, 0.3);
+}
+.theme-matrix .sec-title__kicker {
+  font-size: 0.8rem;
+}
+.theme-matrix .sec-title__kicker::before {
+  content: '<';
+}
+.theme-matrix .sec-title__kicker::after {
+  content: ' />';
+}
+.theme-matrix .sec {
+  border-top: 1px solid var(--line);
+}
+.theme-matrix .place {
+  border: 1px solid var(--line);
+  background: rgba(0, 255, 106, 0.03);
+}
+.theme-matrix .hero--code .hero__names {
+  color: #d6ffe4;
+  text-shadow: 0 0 12px #00ff6a;
+}
+.theme-matrix .code-card__bar i {
+  background: #00ff6a;
+  opacity: 0.5;
+}
+.theme-pixel .greeting__title,
+.theme-pixel .calendar__month,
+.theme-pixel .finale__title {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.theme-pixel .place__time {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}

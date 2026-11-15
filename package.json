@@ -1,0 +1,27 @@
+{
+  "name": "wedding",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Сайт-приглашение на свадьбу Вани и Тоси",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tosya-mar/wedding.git"
+  },
+  "dependencies": {
+    "vue": "^3.5.45"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@vitejs/plugin-vue": "^6.0.11",
+    "typescript": "^6.0.3",
+    "vite": "^6.4.6",
+    "vue-tsc": "^3.3.14"
+  }
+}

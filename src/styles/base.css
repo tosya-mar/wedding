@@ -1,0 +1,278 @@
+:root {
+  --edge-torn: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 30' preserveAspectRatio='none'><path d='M0 30 L0 17 L9 13 L17 18 L28 8 L38 14 L47 10 L58 19 L66 6 L78 13 L86 9 L97 17 L108 5 L118 12 L127 8 L139 18 L148 10 L158 15 L170 4 L180 12 L189 9 L201 19 L210 7 L222 13 L231 9 L243 17 L252 5 L263 14 L272 10 L284 19 L293 8 L305 12 L314 6 L326 16 L335 9 L347 14 L356 5 L368 13 L377 10 L389 18 L400 9 L400 30 Z'/></svg>");
+  --edge-wave: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 30' preserveAspectRatio='none'><path d='M0 30 V18 C40 2 80 2 120 14 S200 30 250 14 S340 0 400 16 V30 Z'/></svg>");
+  --edge-curve: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 30' preserveAspectRatio='none'><path d='M0 30 Q200 -26 400 30 Z'/></svg>");
+  --edge-scallop: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 12'><path d='M0 12 A12 12 0 0 1 24 12 Z'/></svg>");
+  --edge-deckle: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 10' preserveAspectRatio='none'><path d='M0 10 L0 6 L3 4 L6 6 L9 3 L12 5 L15 2 L19 5 L22 3 L25 6 L28 4 L31 6 L34 2 L37 5 L40 3 L44 6 L47 4 L50 6 L53 3 L56 5 L60 4 L60 10 Z'/></svg>");
+  --edge-pixel: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 12' shape-rendering='crispEdges'><path d='M0 12 V8 H4 V4 H8 V0 H24 V4 H28 V8 H32 V12 Z'/></svg>");
+  --edge-none: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+html.no-scroll,
+html.no-scroll body {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+/* ---------- theme defaults (overridden in themes.css) ---------- */
+.app {
+  --page-bg: #e9e6e0;
+  --backdrop: none;
+  --surface: #fbfaf7;
+  --surface-alt: #ece7de;
+  --text: #2d2a26;
+  --muted: #6f6a63;
+  --accent: #7c6a58;
+  --line: rgba(0, 0, 0, 0.18);
+  --card-bg: transparent;
+  --btn-bg: #3a332d;
+  --btn-text: #fff;
+  --btn-radius: 999px;
+  --input-bg: transparent;
+  --input-border: var(--line);
+  --input-radius: 0;
+  --alt-text: var(--text);
+  --alt-muted: var(--muted);
+  --alt-accent: var(--accent);
+  --alt-line: var(--line);
+  --alt-btn-bg: var(--btn-bg);
+  --alt-btn-text: var(--btn-text);
+  --alt-card-bg: var(--card-bg);
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Marck Script', cursive;
+  --title-size: 2.6rem;
+  --title-weight: 400;
+  --title-transform: none;
+  --title-spacing: 0.02em;
+  --hero-sky: linear-gradient(#cfc6ba, #a99d8e);
+  --hero-text: #fff;
+  --hero-skyline: rgba(0, 0, 0, 0.55);
+  --leaf: #6c7a5f;
+  --flower: #f7f2ea;
+  --flower-inner: #fff;
+  --flower-line: rgba(0, 0, 0, 0.12);
+  --flower-core: #d8c48e;
+  --particle: #e8c9c3;
+  --seal: #8a2a2f;
+  --seal-text: rgba(255, 255, 255, 0.85);
+  --edge-mask: var(--edge-torn);
+  --edge-h: 26px;
+  --edge-size: 100% 100%;
+  --edge-repeat: no-repeat;
+
+  position: relative;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--backdrop);
+  pointer-events: none;
+}
+
+.invite {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--surface);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+/* ---------- sections ---------- */
+.sec {
+  --sec-bg: var(--surface);
+  position: relative;
+  padding: 72px 28px;
+  background: var(--sec-bg);
+  text-align: center;
+}
+
+.sec--alt {
+  --sec-bg: var(--surface-alt);
+  --text: var(--alt-text);
+  --muted: var(--alt-muted);
+  --accent: var(--alt-accent);
+  --line: var(--alt-line);
+  --btn-bg: var(--alt-btn-bg);
+  --btn-text: var(--alt-btn-text);
+  --card-bg: var(--alt-card-bg);
+  color: var(--text);
+}
+
+.sec--edge::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(var(--edge-h) * -1 + 1px);
+  height: var(--edge-h);
+  background: var(--sec-bg);
+  -webkit-mask-image: var(--edge-mask);
+  mask-image: var(--edge-mask);
+  -webkit-mask-size: var(--edge-size);
+  mask-size: var(--edge-size);
+  -webkit-mask-repeat: var(--edge-repeat);
+  mask-repeat: var(--edge-repeat);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sec--finale {
+  padding-bottom: 110px;
+}
+
+/* ---------- reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+.reveal--up {
+  transform: translateY(28px);
+}
+.reveal--left {
+  transform: translateX(-40px);
+}
+.reveal--right {
+  transform: translateX(40px);
+}
+.reveal--zoom {
+  transform: scale(0.85);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-in {
+  animation: hero-in 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--d, 0s);
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* ---------- vue transitions ---------- */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.8s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-swap-enter-active,
+.fade-swap-leave-active {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+.fade-swap-enter-from,
+.fade-swap-leave-to {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.expand-enter-active,
+.expand-leave-active {
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+.expand-enter-from,
+.expand-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.tick-enter-active,
+.tick-leave-active {
+  transition:
+    transform 0.22s ease,
+    opacity 0.22s ease;
+}
+.tick-enter-from {
+  transform: translateY(-70%);
+  opacity: 0;
+}
+.tick-leave-to {
+  transform: translateY(70%);
+  opacity: 0;
+}
+
+/* ---------- animations switched off ---------- */
+html.anim-off {
+  scroll-behavior: auto;
+}
+html.anim-off .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+html.anim-off *,
+html.anim-off *::before,
+html.anim-off *::after {
+  animation: none !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+@media (max-width: 520px) {
+  .invite {
+    box-shadow: none;
+  }
+  .sec {
+    padding: 64px 22px;
+  }
+}
