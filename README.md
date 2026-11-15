@@ -45,5 +45,10 @@ npm run build    # проверка типов + сборка в dist/
 Сайт: https://tosya-mar.github.io/wedding/  
 По умолчанию открывается тема **«Навстречу друг другу»** (`?theme=meet`).
 
-Workflow `.github/workflows/deploy.yml` собирает сайт и публикует его при каждом пуше в `main`
-(при необходимости сам включает Pages со source = GitHub Actions).
+Сборка публикуется в ветку `gh-pages` при каждом пуше в `main`. Один раз включите Pages:
+
+1. **Settings → Pages**
+2. **Build and deployment → Source:** Deploy from a branch
+3. Branch: **`gh-pages`** / folder **`/`** → Save
+
+После этого сайт станет доступен по ссылке выше. Анкета уходит на `marikyan.tosya@mail.ru` через FormSubmit — откройте письмо **Activate Form** (приходит при первой отправке) и подтвердите.
