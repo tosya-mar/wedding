@@ -283,50 +283,28 @@
   width: min(58vw, 230px);
   margin: 1rem auto 0.2rem;
   padding: 0;
-  rotate: -2.5deg;
 }
 .hero__portrait--skyline {
   position: absolute;
   left: 50%;
-  bottom: 72px;
+  bottom: 48px;
   z-index: 4;
-  width: min(46vw, 180px);
+  width: min(52vw, 210px);
   margin: 0;
   translate: -50% 0;
-  rotate: -3deg;
 }
-.hero__portrait-frame {
-  position: relative;
-  padding: 9px 9px 30px;
-  background: #fffdf8;
-  box-shadow:
-    0 16px 34px rgba(18, 63, 58, 0.2),
-    0 1px 0 rgba(255, 255, 255, 0.8) inset;
+.hero__portrait--cutout {
+  background: transparent;
+  filter: drop-shadow(0 14px 24px rgba(18, 63, 58, 0.28));
 }
-.hero__portrait-frame::before {
-  content: '15.08.2027';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 8px;
-  font-family: var(--font-script);
-  font-size: 0.95rem;
-  line-height: 1;
-  text-align: center;
-  color: #6b2737;
-  pointer-events: none;
-}
-.hero__portrait-img {
+.hero__portrait--cutout .hero__portrait-img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1.02;
   object-fit: contain;
   object-position: center bottom;
-  background:
-    radial-gradient(circle at 50% 30%, rgba(232, 220, 192, 0.45), transparent 55%),
-    linear-gradient(180deg, #e8dcc0 0%, #f4eee4 100%);
-  filter: saturate(1.05) contrast(1.03);
+  background: transparent;
+  filter: saturate(1.04) contrast(1.03);
 }
 .hero--scene .hero__names {
   display: flex;

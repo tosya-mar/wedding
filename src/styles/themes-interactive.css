@@ -454,7 +454,8 @@
   font-size: 2.55rem;
 }
 .theme-meet .hero__portrait--skyline {
-  bottom: 58px;
+  bottom: 42px;
+  width: min(54vw, 220px);
 }
 .theme-meet .btn {
   border-radius: 12px;

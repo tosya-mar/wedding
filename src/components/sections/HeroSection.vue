@@ -41,10 +41,8 @@ const code: Tok[][] = [
         <p class="hero__date hero-in" style="--d: 0.5s">{{ dateShort }}</p>
         <p class="hero__city hero-in" style="--d: 0.65s">{{ city }}</p>
       </div>
-      <figure class="hero__portrait hero__portrait--skyline hero-in" style="--d: 0.75s">
-        <div class="hero__portrait-frame">
-          <img class="hero__portrait-img" :src="coupleImg" :alt="`${groom.full} и ${bride.full}`" />
-        </div>
+      <figure class="hero__portrait hero__portrait--cutout hero__portrait--skyline hero-in" style="--d: 0.75s">
+        <img class="hero__portrait-img" :src="coupleImg" :alt="`${groom.full} и ${bride.full}`" />
       </figure>
       <Skyline class="hero__skyline" water />
       <div class="hero__scroll" aria-hidden="true">
