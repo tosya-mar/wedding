@@ -429,10 +429,39 @@
   --hero-skyline: #123f3a;
   --particle: #6b2737;
   --edge-mask: var(--edge-curve);
-  --edge-h: 28px;
+  --edge-h: 18px;
 }
 .theme-meet .invite {
   background: var(--surface);
+}
+.theme-meet .sec {
+  padding: 36px 24px;
+}
+.theme-meet .sec--finale {
+  padding-bottom: 72px;
+}
+.theme-meet .sec-title {
+  margin-bottom: 16px;
+}
+.theme-meet .hero--scene .hero__content {
+  padding: 48px 22px 220px;
+}
+.theme-meet .countdown__title {
+  margin-bottom: 12px;
+}
+.theme-meet .countdown__grid {
+  gap: 0;
+}
+.theme-meet .timing {
+  padding-top: 0;
+}
+.theme-meet .place {
+  margin-bottom: 16px;
+}
+@media (max-width: 520px) {
+  .theme-meet .sec {
+    padding: 32px 20px;
+  }
 }
 .theme-meet .sec-title__kicker {
   color: #d9b56a;
