@@ -3,6 +3,7 @@ import type { ThemeDef } from '../../data/themes'
 import { wedding } from '../../data/wedding'
 import Skyline from '../decor/Skyline.vue'
 import Bouquet from '../decor/Bouquet.vue'
+import coupleImg from '../../assets/couple.jpg'
 
 defineProps<{ theme: ThemeDef }>()
 
@@ -32,7 +33,10 @@ const code: Tok[][] = [
       <Bouquet v-if="theme.heroArt === 'bouquet'" class="hero__bouquet hero__bouquet--r" />
       <div class="hero__content">
         <p class="hero__kicker hero-in" style="--d: 0.1s">Приглашение на свадьбу</p>
-        <h1 class="hero__names hero-in" style="--d: 0.35s">
+        <figure class="hero__portrait hero-in" style="--d: 0.25s">
+          <img class="hero__portrait-img" :src="coupleImg" :alt="`${groom.full} и ${bride.full}`" />
+        </figure>
+        <h1 class="hero__names hero-in" style="--d: 0.4s">
           <span>{{ theme.id === 'meet' ? groom.full : groom.short }}</span>
           <span class="hero__amp">&amp;</span>
           <span>{{ theme.id === 'meet' ? bride.full : bride.short }}</span>

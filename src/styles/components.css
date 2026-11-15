@@ -263,7 +263,7 @@
 .hero--scene .hero__content {
   position: relative;
   z-index: 3;
-  padding: 70px 22px 200px;
+  padding: 56px 22px 200px;
   container-type: inline-size;
   container-name: hero-copy;
 }
@@ -277,6 +277,37 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+.hero__portrait {
+  position: relative;
+  width: min(58vw, 220px);
+  margin: 1.1rem auto 0.35rem;
+  aspect-ratio: 4 / 5;
+  border-radius: 50% / 42%;
+  padding: 5px;
+  background:
+    linear-gradient(145deg, #f3e7c8, #d9b56a 45%, #b8924a 70%, #f0e2bc);
+  box-shadow:
+    0 14px 34px rgba(18, 63, 58, 0.18),
+    0 2px 0 rgba(255, 255, 255, 0.55) inset;
+}
+.hero__portrait::before {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  z-index: 1;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+.hero__portrait-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: inherit;
+  filter: saturate(1.04) contrast(1.02);
 }
 .hero--scene .hero__names {
   display: flex;
