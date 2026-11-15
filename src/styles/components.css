@@ -263,7 +263,7 @@
 .hero--scene .hero__content {
   position: relative;
   z-index: 3;
-  padding: 56px 22px 200px;
+  padding: 56px 22px 260px;
   container-type: inline-size;
   container-name: hero-copy;
 }
@@ -285,12 +285,22 @@
   padding: 0;
   rotate: -2.5deg;
 }
+.hero__portrait--skyline {
+  position: absolute;
+  left: 50%;
+  bottom: 72px;
+  z-index: 4;
+  width: min(46vw, 180px);
+  margin: 0;
+  translate: -50% 0;
+  rotate: -3deg;
+}
 .hero__portrait-frame {
   position: relative;
-  padding: 11px 11px 36px;
+  padding: 9px 9px 30px;
   background: #fffdf8;
   box-shadow:
-    0 16px 34px rgba(18, 63, 58, 0.18),
+    0 16px 34px rgba(18, 63, 58, 0.2),
     0 1px 0 rgba(255, 255, 255, 0.8) inset;
 }
 .hero__portrait-frame::before {
@@ -298,9 +308,9 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 10px;
+  bottom: 8px;
   font-family: var(--font-script);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1;
   text-align: center;
   color: #6b2737;
@@ -317,13 +327,6 @@
     radial-gradient(circle at 50% 30%, rgba(232, 220, 192, 0.45), transparent 55%),
     linear-gradient(180deg, #e8dcc0 0%, #f4eee4 100%);
   filter: saturate(1.05) contrast(1.03);
-}
-.hero__portrait-tape {
-  top: -8px;
-  width: 78px;
-  margin-left: -39px;
-  background: rgba(217, 181, 106, 0.55);
-  transform: rotate(8deg);
 }
 .hero--scene .hero__names {
   display: flex;
@@ -1502,6 +1505,22 @@
 .finale__seal {
   width: 76px;
   margin: 0 auto 10px;
+}
+.finale__photo {
+  width: min(46vw, 170px);
+  margin: 0 auto 18px;
+  padding: 8px 8px 26px;
+  background: #fffdf8;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+  rotate: -2deg;
+}
+.finale__photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center bottom;
+  background: linear-gradient(180deg, #e8dcc0, #f4eee4);
 }
 .finale__title {
   margin: 0;

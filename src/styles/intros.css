@@ -1384,7 +1384,7 @@
   height: 100%;
 }
 .meet__water {
-  fill: rgba(10, 42, 38, 0.55);
+  fill: none;
 }
 .meet__ripples line {
   stroke: rgba(232, 220, 192, 0.4);

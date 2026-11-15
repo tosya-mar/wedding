@@ -33,20 +33,19 @@ const code: Tok[][] = [
       <Bouquet v-if="theme.heroArt === 'bouquet'" class="hero__bouquet hero__bouquet--r" />
       <div class="hero__content">
         <p class="hero__kicker hero-in" style="--d: 0.1s">Приглашение на свадьбу</p>
-        <figure class="hero__portrait hero-in" style="--d: 0.25s">
-          <div class="hero__portrait-frame">
-            <img class="hero__portrait-img" :src="coupleImg" :alt="`${groom.full} и ${bride.full}`" />
-          </div>
-          <i class="tape hero__portrait-tape" aria-hidden="true" />
-        </figure>
-        <h1 class="hero__names hero-in" style="--d: 0.4s">
+        <h1 class="hero__names hero-in" style="--d: 0.3s">
           <span>{{ theme.id === 'meet' ? groom.full : groom.short }}</span>
           <span class="hero__amp">&amp;</span>
           <span>{{ theme.id === 'meet' ? bride.full : bride.short }}</span>
         </h1>
-        <p class="hero__date hero-in" style="--d: 0.6s">{{ dateShort }}</p>
-        <p class="hero__city hero-in" style="--d: 0.8s">{{ city }}</p>
+        <p class="hero__date hero-in" style="--d: 0.5s">{{ dateShort }}</p>
+        <p class="hero__city hero-in" style="--d: 0.65s">{{ city }}</p>
       </div>
+      <figure class="hero__portrait hero__portrait--skyline hero-in" style="--d: 0.75s">
+        <div class="hero__portrait-frame">
+          <img class="hero__portrait-img" :src="coupleImg" :alt="`${groom.full} и ${bride.full}`" />
+        </div>
+      </figure>
       <Skyline class="hero__skyline" water />
       <div class="hero__scroll" aria-hidden="true">
         <span />
