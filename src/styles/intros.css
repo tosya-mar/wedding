@@ -1333,14 +1333,6 @@
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: linear-gradient(180deg, #eef3f0 0%, #f7f8f7 52%, #ffffff 78%);
-  -webkit-mask:
-    linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent),
-    linear-gradient(transparent, #000 10%, #000 76%, transparent);
-  -webkit-mask-composite: source-in;
-  mask:
-    linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent),
-    linear-gradient(transparent, #000 10%, #000 76%, transparent);
-  mask-composite: intersect;
 }
 .meet__cloud {
   position: absolute;
@@ -1451,7 +1443,7 @@
   }
 }
 .meet__heart {
-  fill: #6b2737;
+  fill: #e53935;
   transform-box: fill-box;
   transform-origin: 50% 100%;
   transform: scale(0);
