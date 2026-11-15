@@ -307,7 +307,7 @@ export const themes: ThemeDef[] = [
     id: 'meet',
     name: 'Навстречу друг другу',
     hint: 'Мост сводится — Ваня и Тося идут навстречу',
-    swatch: ['#123f3a', '#e8dcc0', '#6b2737'],
+    swatch: ['#123f3a', '#ffffff', '#6b2737'],
     hero: 'scene',
     heroArt: 'skyline',
     particles: 'hearts',

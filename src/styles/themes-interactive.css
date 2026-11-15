@@ -393,24 +393,23 @@
 
 /* ===================== Навстречу друг другу ===================== */
 .theme-meet {
-  --page-bg: #e8dcc0;
+  --page-bg: #ffffff;
   --backdrop:
-    radial-gradient(circle at 18% 12%, rgba(255, 248, 235, 0.75), transparent 42%),
-    radial-gradient(circle at 86% 78%, rgba(46, 107, 95, 0.18), transparent 48%),
-    linear-gradient(180deg, #f3ebda 0%, #e8dcc0 55%, #d9c7a4 100%);
-  --intro-bg: linear-gradient(180deg, #f3ebda 0%, #e8dcc0 55%, #d4e0da 100%);
+    radial-gradient(circle at 18% 12%, rgba(232, 220, 192, 0.35), transparent 42%),
+    radial-gradient(circle at 86% 78%, rgba(46, 107, 95, 0.1), transparent 48%);
+  --intro-bg: linear-gradient(180deg, #ffffff 0%, #f7f4ef 55%, #eef3f0 100%);
   --intro-text: #123f3a;
-  --surface: #faf6ee;
+  --surface: #ffffff;
   --surface-alt: #2e6b5f;
   --text: #123f3a;
   --muted: #5d6f68;
   --accent: #6b2737;
-  --line: rgba(18, 63, 58, 0.18);
-  --alt-text: #faf6ee;
-  --alt-muted: rgba(250, 246, 238, 0.82);
+  --line: rgba(18, 63, 58, 0.16);
+  --alt-text: #ffffff;
+  --alt-muted: rgba(255, 255, 255, 0.82);
   --alt-accent: #d9b56a;
-  --alt-line: rgba(250, 246, 238, 0.35);
-  --alt-btn-bg: #faf6ee;
+  --alt-line: rgba(255, 255, 255, 0.35);
+  --alt-btn-bg: #ffffff;
   --alt-btn-text: #123f3a;
   --btn-bg: #123f3a;
   --btn-radius: 12px;
@@ -421,8 +420,8 @@
   --font-script: 'Caveat', cursive;
   --title-size: 2.2rem;
   --hero-sky:
-    radial-gradient(circle at 30% 22%, rgba(255, 248, 235, 0.7), transparent 45%),
-    linear-gradient(180deg, #c5d8d0 0%, #e8dcc0 62%, #f3ebda 100%);
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.85), transparent 45%),
+    linear-gradient(180deg, #dce8e3 0%, #f5f7f6 58%, #ffffff 100%);
   --hero-text: #123f3a;
   --hero-skyline: #123f3a;
   --particle: #6b2737;
@@ -447,7 +446,7 @@
 }
 .theme-meet .place {
   border-radius: 16px;
-  background: #faf6ee;
+  background: #ffffff;
 }
 .theme-meet .sec-title__kicker {
   color: #d9b56a;
