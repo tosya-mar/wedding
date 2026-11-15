@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { wedding } from '../../data/wedding'
-
 const year = 2027
 const month = 7 // August, 0-based
 const weddingDay = 15
